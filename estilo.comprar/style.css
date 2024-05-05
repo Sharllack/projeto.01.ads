@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body { font-family: Arial, sans-serif;
+    background-color: white;
+}
+  .product-images { margin-right: 20px; margin-left: 50px;}
+  .thumbnail { width: 50px; height: auto; cursor: pointer; }
+  .thumbnail:hover { opacity: 0.6; }
+  .main-image { width: 350px; height: auto; border: 1px solid #ddd; }
+  .product-info { flex-grow: 1; }
+  .price { color: rgb(0, 0, 0); font-weight: bold; margin-top: 20px;}
+  .buy-button { background-color: blue; color: white; padding: 10px 20px; text-decoration: none; display: block; margin-top: 20px; border: none; cursor: pointer;}
+  .hidden {
+    display: none;
+  }
+
+  #topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(27, 27, 27);
+    margin: -10px;
+}
+
+#topo ul {
+    display: flex;
+    list-style-type: none;
+}
+
+#topo li {
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+#topo a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+#usu {
+    font-size: 20px;
+    transition: .5s;
+}
+
+.logos {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+#topo #usu li:hover {
+    box-sizing: border-box;
+    text-decoration: underline;
+    border-radius: 5px;
+    transition-duration: 1s;
+}
+
+#logout-button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+#logout-button:hover {
+    text-decoration: underline;
+}
+
+#logout span {
+    vertical-align: middle;
+    margin-right: 50px;
+}
+
+#logout-button {
+    display: none;
+}
+
+#logado {
+    display: flex;
+    align-items: center;
+}
+
+#logado div {
+    margin-left: 50px;
+}
+
+header {
+    background-color: rgb(27, 27, 27);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    transition: .5s;
+    position: sticky;
+    top: -1px;
+    z-index: 10;
+
+}
+
+header #title {
+    display: flex;
+    align-items: center;
+}
+
+header #img1 {
+    width: 100px;
+    transition: .5s;
+}
+
+header #img2 {
+    width: 100px;
+    height: 60px;
+    margin-right: 50px;
+    transition: .5s;
+}
+
+header.rolagem {
+    background-color: #6d453400;
+    box-shadow: none;
+    transition: .5s;
+}
+
+header.rolagem #img1 {
+    width: 80px;
+    transition: .5s;
+}
+
+header.rolagem #img2 {
+    width: 80px;
+    height: 55px;
+    transition: .5s;
+}
+
+header.rolagem div, header.rolagem div a, header.rolagem #pe a{
+    background-color: #6d453400;
+    transition: .5s;
+    text-shadow: none;
+}
+
+header.rolagem #pe, header.rolagem #burguer{
+    display: none;
+}
+
+header.rolagem .logos {
+    height: 15px;
+    width: 15px;
+    transition: .5s;
+}
+
+header.rolagem #usu {
+    font-size: 15px;
+    transition: .5s;
+}
+
+header.rolagem #logout {
+    font-size: 15px;
+}
+
+header.rolagem #openMenu, header.rolagem #closeMenu{
+    display: block;
+    transition: .5s;
+}
+
+header h1 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin-top: 11px;
+}
+
+header h1 a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#idpes {
+    display: flex;
+    width: 40vw;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+#pe {
+    background-color: #073260;
+    width: 98.79vw;
+}
+
+#pe ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#pe li {
+    display: inline-block;
+}
+
+#pe a {
+    background-color: #073260;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 11px 90px;
+    border-radius: 3px;
+}
+
+#pe li a:hover {
+    background-color: rgb(138, 137, 137);
+    transition: .5s;
+}
+
+.dropdown-menu {
+    position: absolute;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.459);
+    display: none;
+    width: auto;
+    z-index: 10;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.hamburguer {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: .3s;
+}
+
+#topo a {
+    padding: 3px;
+}
+
+.logos {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+#burguer {
+    display: none;
+}
+
+#pe > ul > li > a:hover {
+    background-color: rgb(94, 93, 93);
+    transition-duration: .5s;
+}
+
+#produtoContainer {
+    display: flex;
+    background-color: #ffffff;
+    width: 80%;
+    justify-content: center;
+    margin: 5px auto;
+    padding: 25px;
+    max-height: 100vh;
+}
+
+#desc {
+    margin-top: 20px;
+    background-color: rgb(59, 59, 59);
+    color:white;
+    border: none;
+    width: 95px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#descricaoProduto {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-top: 10px;
+}
+
+.parc {
+    margin-top: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+
+footer {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+}
