@@ -5,6 +5,7 @@ document.getElementById('toggle').addEventListener('change', function() {
     log = document.getElementById('topolog');
     cad = document.getElementById('topocad');
     usu = document.getElementById('usu');
+    header = document.getElementById('header');
     if(this.checked) {
       console.log('Toggle ON');
       main.style.backgroundColor = "black";
@@ -14,6 +15,7 @@ document.getElementById('toggle').addEventListener('change', function() {
       log.style.color = "white";
       cad.style.color = "white";
       usu.style.backgroundColor = "black";
+      header.style.backgroundColor = "black";
     } else {
       console.log('Toggle OFF');
       main.style.backgroundColor = "";
@@ -23,6 +25,7 @@ document.getElementById('toggle').addEventListener('change', function() {
       log.style.color = "";
       cad.style.color = ""
       usu.style.backgroundColor = "rgb(212, 212, 212)";
+      header.style.backgroundColor = "";
     }
   });
 
