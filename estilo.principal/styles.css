@@ -40,8 +40,11 @@ body {
 }
 
 #usu {
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-size: .9em;
     transition: .5s;
+    height: 100px;
 }
 
 .logos {
@@ -611,3 +614,64 @@ footer {
     color: white;
     text-align: center;
 }
+
+.toggle-button {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 15px;
+  }
+
+  .toggle-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider1:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider1 {
+    background-color: #000000;
+  }
+
+  input:focus + .slider1 {
+    box-shadow: 0 0 1px #000000;
+  }
+
+  input:checked + .slider1:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Estilo adicional para o slider */
+  .slider1.round {
+    border-radius: 34px;
+  }
+
+  .slider1.round:before {
+    border-radius: 50%;
+  }
