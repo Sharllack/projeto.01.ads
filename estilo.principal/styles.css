@@ -97,7 +97,7 @@ body {
 }
 
 header {
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(212, 212, 212);
     color: rgb(255, 255, 255);
     padding: 10px;
     transition: .5s;
@@ -229,7 +229,7 @@ header h1 a {
     text-align: center;
     color: white;
     font-weight: bold;
-    padding: 11px 90px;
+    padding: 12px 70px;
     border-radius: 3px;
 }
 
@@ -674,4 +674,9 @@ footer {
 
   .slider1.round:before {
     border-radius: 50%;
+  }
+
+  .icons {
+    text-decoration: none;
+    color: black;
   }
