@@ -3,9 +3,6 @@
 @media screen and (max-width: 375px) {
     footer {
         font-size: .5em;
-        bottom: 0px;
-        position: absolute;
-        width: 100%;
         
     }
 
@@ -35,9 +32,6 @@
 @media screen and (min-width: 375px) and (max-width: 550px) {
     footer {
         font-size: .6em;
-        bottom: 0px;
-        position: absolute;
-        width: 100%;
     }
 
     #topo {
@@ -66,9 +60,6 @@
 @media screen and (min-width: 550px) and (max-width: 628px) {
     footer {
         font-size: .9em;
-        bottom: 0px;
-        position: absolute;
-        width: 100%;
     }
 
     #topo {
