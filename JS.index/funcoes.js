@@ -27,6 +27,7 @@ window.onload = function() {
       document.getElementById('logout-button').style.display = 'block';
       document.getElementById('usu').style.display = 'none'; // Esconde as opções de login e cadastro
       document.getElementById('toggle-button').style.display = 'block';
+      document.getElementById('logout').style.display = 'block';
       
   };
 }
@@ -37,6 +38,7 @@ window.onload = function() {
     document.getElementById('logout-button').style.display = 'none'; // Esconde o botão de logout
     document.getElementById('usu').style.display = 'block'; // Mostra as opções de login e cadastro após o logout
     document.getElementById('toggle-button').style.display = 'none';
+    document.getElementById('logout').style.display = 'none';
     alert('Você foi deslogado.'); // Opcional: Mostra um alerta informando que o logout foi bem-sucedido
 
     window.location.href = "./index.html";
