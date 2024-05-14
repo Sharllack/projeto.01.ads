@@ -61,10 +61,14 @@ body {
     transition-duration: 1s;
 }
 
+#user {
+    font-size: 1.2em;
+}
+
 #logout-button {
     background: none;
     border: none;
-    color: white;
+    color: black;
     cursor: pointer;
     font-size: 1.1em;
 }
@@ -72,6 +76,7 @@ body {
 
 #logout-button {
     display: none;
+    margin-left: 35px;
 }
 
 #logout-button:hover {
@@ -80,7 +85,7 @@ body {
 
 #logout span {
     vertical-align: middle;
-    margin-right: 50px;
+    color: black;
 }
 
 .hr1, .hr2 {
@@ -93,12 +98,12 @@ body {
 }
 
 #logado div {
-    margin-left: 50px;
+    margin-left: 15px;
 }
 
 header {
     background-color: rgb(212, 212, 212);
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     padding: 10px;
     transition: .5s;
     position: sticky;
@@ -615,15 +620,15 @@ footer {
     text-align: center;
 }
 
-.toggle-button {
+#toggle-button {
     position: relative;
-    display: inline-block;
     width: 60px;
     height: 34px;
     margin-left: 15px;
+    margin-right: 15px;
   }
 
-  .toggle-button input {
+  #toggle-button input {
     opacity: 0;
     width: 0;
     height: 0;

@@ -6,7 +6,6 @@
     <link rel="shortcut icon" href="./imagens/icon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./estilo.principal/styles.css">
     <link rel="stylesheet" href="./estilo.principal/media.queries.css">
-    <link rel="stylesheet" href="./estilo.principal/darkmode.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>Projeto 01 ADS </title>
 </head>
@@ -30,16 +29,21 @@
                     <li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>
                     <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
                     <li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
-                    <label class="toggle-button">
-                        <input type="checkbox" id="toggle">
-                        <span class="slider1 round"></span>
-                    </label>
                 </ul>
-                <div id="logout">
-                    <button id="logout-button" onclick="logout()">Logout <span class="material-symbols-outlined">
-                        logout
-                        </span></button>
-                </div>
+                <ul id="logout">
+                    <li>
+                        <button id="logout-button" onclick="logout()">Logout <span class="material-symbols-outlined">
+                            logout
+                            </span></button>
+                    </li>
+
+                    <li>
+                        <label id="toggle-button">
+                            <input type="checkbox" id="toggle">
+                            <span class="slider1 round"></span>
+                        </label>
+                    </li>
+                </ul>
             </section>
         </menu>
         <span id="burguer" class="material-symbols-outlined" onclick="clickMenu()">Menu</span>
