@@ -41,7 +41,7 @@ window.onload = function() {
     document.getElementById('logout').style.display = 'none';
     alert('Você foi deslogado.'); // Opcional: Mostra um alerta informando que o logout foi bem-sucedido
 
-    window.location.href = "./index.php";
+    window.location.href = "./index.html";
   }
 
 let hamburguer = document.querySelector(".hamburguer");

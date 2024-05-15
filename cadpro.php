@@ -124,7 +124,7 @@
 <body>
     <header>
         <menu id="topo">
-            <a href="./index.php">
+            <a href="./index.html">
                 <div id="title">
                     <img src="./imagens/logolm1.png" alt="logo L e M" id="img1">
                     <img src="./imagens/logonfl.png" alt="logo nfl" id="img2">
