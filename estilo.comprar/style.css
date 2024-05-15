@@ -203,7 +203,7 @@ header h1 a {
 #burguer {
     background-color: #073260;
     color: white;
-    display: block;
+    display: none;
     text-align: center;
     padding: 5px;
     cursor: pointer; /* Para mudar o cursor */
