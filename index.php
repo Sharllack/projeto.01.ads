@@ -40,8 +40,8 @@ if(!isset($_SESSION)) {
                         <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
                         <li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
                         <li>
-                            <label id="toggle-button">
-                                <input type="checkbox" id="toggle">
+                            <label class="toggle-button">
+                                <input type="checkbox" class="toggle">
                                 <span class="slider1 round"></span>
                             </label>
                         </li>
@@ -49,20 +49,16 @@ if(!isset($_SESSION)) {
                 <ul id="logout">
                     <li>
                         <?php else: ?>
-                            <?php
-                                echo '<p id="usunome">Olá, ' . $_SESSION['usuario'] . '!</p>';
-                                echo '<li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>';
-                                echo '<li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>';
-                                echo '<li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>';
-                                echo '<li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>';
-                                echo '<a href="./logout.php" id="logoutbtn">Logout</a>';
-                                echo '<a href="./logout.php"><span class="material-symbols-outlined">logout</span></a>';
-                            ?>
-                            
+                            <p id="usunome">Olá, <?= $_SESSION['usuario'] ?> !</p>
+                            <li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>
+                            <li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>
+                            <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
+                            <li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
+                            <a href="./logout.php" id="logoutbtn">Logout</a>
+                            <a href="./logout.php"><span class="material-symbols-outlined">logout</span></a>
                     </li>
-                    <li>
-                        <label id="toggle-button">
-                            <input type="checkbox" id="toggle">
+                        <label class="toggle-button">
+                            <input type="checkbox" class="toggle">
                             <span class="slider1 round"></span>
                         </label>
                     </li>

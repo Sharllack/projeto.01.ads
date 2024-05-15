@@ -616,7 +616,7 @@ footer {
     text-align: center;
 }
 
-#toggle-button {
+.toggle-button {
     position: relative;
     width: 60px;
     height: 34px;
@@ -624,7 +624,7 @@ footer {
     margin-right: 15px;
   }
 
-  #toggle-button input {
+  .toggle-button input {
     opacity: 0;
     width: 0;
     height: 0;

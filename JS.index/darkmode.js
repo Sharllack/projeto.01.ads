@@ -1,4 +1,4 @@
-document.getElementById('toggle').addEventListener('change', function() {
+document.querySelector('.toggle').addEventListener('change', function() {
   var main = document.getElementById('main');
   var topo = document.getElementById('topo');
   var log = document.getElementById('topolog');
