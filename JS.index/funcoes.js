@@ -28,7 +28,6 @@ window.onload = function() {
       document.getElementById('usu').style.display = 'none'; // Esconde as opções de login e cadastro
       document.getElementById('toggle-button').style.display = 'block';
       document.getElementById('logout').style.display = 'block';
-      
   };
 }
 
