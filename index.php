@@ -32,18 +32,33 @@ if(!isset($_SESSION)) {
             <section id="logado">
                 <div id="user"></div>
                 <ul id="usu">
-                    <li><a href="./login.php" id="topolog">Login &#x1F464</a></li>
-                    <li><a href="./cadastro.php" id="topocad"> Cadastre-se  &#x1F58A &#xFE0F</a></li>
-                    <li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>
-                    <li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>
-                    <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
-                    <li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
+                    <?php if(!isset($_SESSION['usuario'])):?>
+                        <li><a href="./login.php" id="topolog">Login &#x1F464</a></li>
+                        <li><a href="./cadastro.php" id="topocad"> Cadastre-se  &#x1F58A &#xFE0F</a></li>
+                        <li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>
+                        <li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>
+                        <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
+                        <li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
+                        <li>
+                            <label id="toggle-button">
+                                <input type="checkbox" id="toggle">
+                                <span class="slider1 round"></span>
+                            </label>
+                        </li>
                 </ul>
                 <ul id="logout">
                     <li>
-                        <button id="logout-button" onclick="logout()">Logout <span class="material-symbols-outlined">
-                            logout
-                            </span></button>
+                        <?php else: ?>
+                            <?php
+                                echo '<p id="usunome">Olá, ' . $_SESSION['usuario'] . '!</p>';
+                                echo '<li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>';
+                                echo '<li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>';
+                                echo '<li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>';
+                                echo '<li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>';
+                                echo '<a href="./logout.php" id="logoutbtn">Logout</a>';
+                                echo '<a href="./logout.php"><span class="material-symbols-outlined">logout</span></a>';
+                            ?>
+                            
                     </li>
                     <li>
                         <label id="toggle-button">
@@ -51,6 +66,7 @@ if(!isset($_SESSION)) {
                             <span class="slider1 round"></span>
                         </label>
                     </li>
+                    <?php endif; ?>
                 </ul>
             </section>
         </menu>
