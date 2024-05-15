@@ -215,12 +215,13 @@ header h1 a {
 
 #pe {
     background-color: #073260;
-    width: 98.79vw;
+    width: 100%;
 }
 
 #pe ul {
     list-style-type: none;
     text-align: center;
+    position: relative;
 }
 
 #pe li {

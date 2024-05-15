@@ -6,6 +6,10 @@
         background: rgb(255, 255, 255);
     }
 
+    #burguer {
+        display: block;
+    }
+
     .hamburguer {
         display: block;
         z-index: 1;
@@ -234,6 +238,10 @@ footer {
 
     body {
         background: rgb(255, 255, 255);
+    }
+
+    #burguer {
+        display: block;
     }
 
     .hamburguer {
@@ -466,6 +474,10 @@ footer {
         background-color: white;
     }
 
+    #burguer {
+        display: block;
+    }
+
     .hamburguer {
         display: block;
         z-index: 1;
@@ -694,6 +706,10 @@ footer {
 
     body {
         background-color: white;
+    }
+
+    #burguer {
+        display: block;
     }
 
     .hamburguer {
