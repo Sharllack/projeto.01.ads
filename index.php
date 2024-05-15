@@ -14,8 +14,8 @@
         <menu id="topo">
             <h1>
                 <div id="title">
-                    <a href="./index.html"><img src="./imagens/logolm1.png" alt="logo L e M" id="img1"></a>
-                    <a href="./index.html"><img src="./imagens/logonfl.png" alt="logo nfl" id="img2"></a>
+                    <a href="./index.php"><img src="./imagens/logolm1.png" alt="logo L e M" id="img1"></a>
+                    <a href="./index.php"><img src="./imagens/logonfl.png" alt="logo nfl" id="img2"></a>
                 </div>
                 <input type="search" name="pes" id="idpes" placeholder="O que você está buscando?">
             </h1>
@@ -23,8 +23,8 @@
             <section id="logado">
                 <div id="user"></div>
                 <ul id="usu">
-                    <li><a href="./login.html" id="topolog">Login &#x1F464</a></li>
-                    <li><a href="./cadastro.html" id="topocad"> Cadastre-se  &#x1F58A &#xFE0F</a></li>
+                    <li><a href="./login.php" id="topolog">Login &#x1F464</a></li>
+                    <li><a href="./cadastro.php" id="topocad"> Cadastre-se  &#x1F58A &#xFE0F</a></li>
                     <li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>
                     <li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>
                     <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
