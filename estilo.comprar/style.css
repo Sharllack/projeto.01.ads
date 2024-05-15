@@ -25,7 +25,7 @@ body { font-family: Arial, sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(212, 212, 212);
     margin: -10px;
 }
 
@@ -41,13 +41,16 @@ body { font-family: Arial, sans-serif;
 
 #topo a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
 #usu {
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    font-size: .9em;
     transition: .5s;
+    height: 100px;
 }
 
 .logos {
@@ -64,21 +67,17 @@ body { font-family: Arial, sans-serif;
     transition-duration: 1s;
 }
 
-#logout-button {
-    background: none;
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 1.1em;
+#user {
+    font-size: 1.2em;
 }
 
-#logout-button:hover {
+#logoutbtn:hover {
     text-decoration: underline;
 }
 
 #logout span {
     vertical-align: middle;
-    margin-right: 50px;
+    color: black;
 }
 
 #logout-button {
@@ -91,12 +90,22 @@ body { font-family: Arial, sans-serif;
 }
 
 #logado div {
-    margin-left: 50px;
+    margin-left: 15px;
+}
+
+#usunome {
+    font-size: 1.3em;
+    margin-right: 15px;
+}
+
+#logoutbtn {
+    font-size: 1.2em;
+    margin-left: 15px;
 }
 
 header {
-    background-color: rgb(27, 27, 27);
-    color: rgb(255, 255, 255);
+    background-color: rgb(212, 212, 212);
+    color: rgb(0, 0, 0);
     padding: 10px;
     transition: .5s;
     position: sticky;
@@ -191,6 +200,19 @@ header h1 a {
     border: 1px solid black;
 }
 
+#burguer {
+    background-color: #073260;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer; /* Para mudar o cursor */
+}
+
+#burguer:active {
+    background-color: rgb(138, 137, 137);
+}
+
 #pe {
     background-color: #073260;
     width: 98.79vw;
@@ -214,7 +236,7 @@ header h1 a {
     text-align: center;
     color: white;
     font-weight: bold;
-    padding: 11px 90px;
+    padding: 12px 70px;
     border-radius: 3px;
 }
 
@@ -256,25 +278,6 @@ header h1 a {
     transition: .3s;
 }
 
-#topo a {
-    padding: 3px;
-}
-
-.logos {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-}
-
-#burguer {
-    display: none;
-}
-
-#pe > ul > li > a:hover {
-    background-color: rgb(94, 93, 93);
-    transition-duration: .5s;
-}
-
 #produtoContainer {
     display: flex;
     background-color: #ffffff;
@@ -307,6 +310,68 @@ header h1 a {
     text-decoration: underline;
 }
 
+#toggle-button {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  #toggle-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../imagens/pexels-francesco-ungaro-998641.jpg');
+    background-position: center center;
+    background-size: contain;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider1:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider1 {
+    background-image: url('../imagens/pexels-felixmittermeier-956981.jpg');
+  }
+
+  input:focus + .slider1 {
+    box-shadow: 0 0 1px #073260;
+  }
+
+  input:checked + .slider1:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  /* Estilo adicional para o slider */
+  .slider1.round {
+    border-radius: 34px;
+  }
+
+  .slider1.round:before {
+    border-radius: 50%;
+  }
 
 footer {
     background-color: rgb(27, 27, 27);

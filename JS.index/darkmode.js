@@ -7,8 +7,9 @@ document.getElementById('toggle').addEventListener('change', function() {
   var header = document.getElementById('header');
   var user = document.getElementById('user');
   var logbutton = document.getElementById('logoutbtn');
-  var quit = document.querySelector('.material-symbols-outlined');
-  var logado = document.getElementById('usunome');
+  var icon = document.querySelector('.material-symbols-outlined');
+  var username = document.getElementById('usunome');
+  var logado = document.getElementById('logado');
   
   if (this.checked) {
       console.log('Toggle ON');
@@ -28,9 +29,11 @@ document.getElementById('toggle').addEventListener('change', function() {
       user.style.transition = '.5s';
       logbutton.style.color = "white";
       logbutton.style.transition = '.5s';
-      quit.style.color = "white";
-      quit.style.transition = '.5s';
-      logado.style.color = "white";
+      icon.style.color = "white";
+      icon.style.transition = '.5s';
+      username.style.color = "white";
+      username.style.transition = '.5s';
+      logado.style.backgroundColor = "black";
       logado.style.transition = '.5s';
   } else {
       console.log('Toggle OFF');
@@ -50,8 +53,10 @@ document.getElementById('toggle').addEventListener('change', function() {
       user.style.transition = '.5s';
       logbutton.style.color = "";
       logbutton.style.transition = '.5s';
-      quit.style.color = "";
-      quit.style.transition = '.5s';
+      icon.style.color = "";
+      icon.style.transition = '.5s';
+      username.style.color = "";
+      username.style.transition = '.5s';
       logado.style.backgroundColor = "";
       logado.style.transition = '.5s';
   }

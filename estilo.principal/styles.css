@@ -65,21 +65,7 @@ body {
     font-size: 1.2em;
 }
 
-#logout-button {
-    background: none;
-    border: none;
-    color: black;
-    cursor: pointer;
-    font-size: 1.1em;
-}
-
-
-#logout-button {
-    display: none;
-    margin-left: 35px;
-}
-
-#logout-button:hover {
+#logoutbtn:hover {
     text-decoration: underline;
 }
 
