@@ -23,7 +23,6 @@
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgb(27, 27, 27);
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
 
@@ -257,7 +256,6 @@ footer {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgb(27, 27, 27);
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
 
@@ -491,7 +489,6 @@ footer {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgb(27, 27, 27);
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
 
@@ -725,7 +722,6 @@ footer {
         left: 0;
         width: 100vw;
         height: 100vh;
-        background-color: rgb(27, 27, 27);
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
 

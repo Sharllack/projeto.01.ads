@@ -32,40 +32,27 @@ if(!isset($_SESSION)) {
                 <div id="user"></div>
                 <ul id="usu">
                     <?php if(!isset($_SESSION['usuario'])):?>
-                        <li><a href="./login.php" id="topolog">Login &#x1F464</a></li>
-                        <li><a href="./cadastro.php" id="topocad"> Cadastre-se  &#x1F58A &#xFE0F</a></li>
+                        <li><a href="./login.php" class="topolog">Login &#x1F464</a></li>
+                        <li><a href="./cadastro.php" class="topocad"> Cadastre-se  &#x1F58A &#xFE0F</a></li>
                         <li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>
                         <li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>
                         <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
                         <li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
-                        <li>
-                            <label id="toggle-button">
-                                <input type="checkbox" id="toggle">
-                                <span class="slider1 round"></span>
-                            </label>
-                        </li>
-                </ul>
-                <ul id="logout">
+                    <?php else: ?>
+                        <p class="topolog">Olá, <?=$_SESSION['usuario']?>!</p>
+                        <li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>
+                        <li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>
+                        <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
+                        <li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
+                        <li><a href="./logout.php" class="topocad">Logout</a></li>
+                        <li><a href="./logout.php"><span class="material-symbols-outlined">logout</span></a></li>
+                    <?php endif; ?>
                     <li>
-                        <?php else: ?>
-                            <?php
-                                echo '<p id="usunome">Olá, ' . $_SESSION['usuario'] . '!</p>';
-                                echo '<li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>';
-                                echo '<li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>';
-                                echo '<li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>';
-                                echo '<li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>';
-                                echo '<a href="./logout.php" id="logoutbtn">Logout</a>';
-                                echo '<a href="./logout.php"><span class="material-symbols-outlined">logout</span></a>';
-                            ?>
-                            
-                    </li>
-                    <li>
-                        <label id="toggle-button">
-                            <input type="checkbox" id="toggle">
+                        <label class="toggle-button">
+                            <input type="checkbox" class="toggle">
                             <span class="slider1 round"></span>
                         </label>
                     </li>
-                    <?php endif; ?>
                 </ul>
             </section>
         </menu>
@@ -132,7 +119,7 @@ if(!isset($_SESSION)) {
     </div>
 
     <footer>Site criado por <strong>Larissa Menezes</strong> e <strong>Lucas Menezes</strong> para o Projeto de ADS.</footer>
-
+    <script src="./JS.com/darkmode.js"></script>
     <script src="./JS.com/comprar.js"></script>
   
 </body>

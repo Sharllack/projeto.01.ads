@@ -45,12 +45,25 @@ body { font-family: Arial, sans-serif;
     font-weight: bold;
 }
 
+.topolog {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.topocad {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
 #usu {
     display: flex;
     align-items: center;
     font-size: .9em;
     transition: .5s;
     height: 100px;
+    background-color: rgb(212, 212, 212);
 }
 
 .logos {
@@ -311,7 +324,7 @@ header h1 a {
     text-decoration: underline;
 }
 
-#toggle-button {
+.toggle-button {
     position: relative;
     width: 60px;
     height: 34px;
@@ -319,7 +332,7 @@ header h1 a {
     margin-right: 15px;
   }
 
-  #toggle-button input {
+  .toggle-button input {
     opacity: 0;
     width: 0;
     height: 0;

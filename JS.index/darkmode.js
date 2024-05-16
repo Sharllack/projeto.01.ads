@@ -1,6 +1,7 @@
 document.querySelector('.toggle').addEventListener('change', function() {
   var main = document.getElementById('main');
   var topo = document.getElementById('topo');
+  var header = document.getElementById('header');
   var log = document.querySelector('.topolog');
   var cad = document.querySelector('.topocad');
   var usu = document.querySelector('#usu');
@@ -11,6 +12,8 @@ document.querySelector('.toggle').addEventListener('change', function() {
       main.style.transition = '.5s';
       topo.style.backgroundColor = "black";
       topo.style.transition = '.5s';
+      header.style.backgroundColor = "black"
+      header.style.transition = ".5s";
       log.style.color = "white";
       log.style.transition = '.5s';
       cad.style.color = "white";
@@ -24,6 +27,8 @@ document.querySelector('.toggle').addEventListener('change', function() {
       main.style.transition = '.5s';
       topo.style.backgroundColor = "";
       topo.style.transition = '.5s';
+      header.style.backgroundColor = ""
+      header.style.transition = ".5s";
       log.style.color = "";
       log.style.transition = '.5s';
       cad.style.color = "";
