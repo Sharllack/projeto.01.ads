@@ -35,8 +35,8 @@ body {
 
 #topo a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
     font-weight: bold;
+    padding: 3px;
 }
 
 #usu {
@@ -71,7 +71,6 @@ body {
 
 #logout span {
     vertical-align: middle;
-    color: black;
 }
 
 .hr1, .hr2 {
@@ -87,19 +86,24 @@ body {
     margin-left: 15px;
 }
 
-#usunome {
-    font-size: 1.3em;
-    margin-right: 15px;
+.material-symbols-outlined {
+    color: black;
 }
 
-#logoutbtn {
+.topolog {
+    color: black;
     font-size: 1.2em;
-    margin-left: 15px;
+    font-weight: bold;
+}
+
+.topocad {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
 header {
     background-color: rgb(212, 212, 212);
-    color: rgb(0, 0, 0);
     padding: 10px;
     transition: .5s;
     position: sticky;
@@ -178,12 +182,6 @@ header h1 {
     align-items: center;
     font-size: 1.5em;
     margin-top: 11px;
-}
-
-header h1 a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 #idpes {
