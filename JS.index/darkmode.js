@@ -6,11 +6,11 @@ document.querySelector('.toggle').addEventListener('change', function() {
   var usu = document.getElementById('usu');
   var header = document.getElementById('header');
   var user = document.getElementById('user');
-  var logbutton = document.getElementById('logoutbtn');
+  var logado = document.querySelector('#logado'); 
+  var logbutton = document.querySelector('#logoutbtn');
   var icon = document.querySelector('.material-symbols-outlined');
-  var username = document.getElementById('usunome');
-  var logado = document.getElementById('logado');
-  
+  var username = document.querySelector('#usunome'); 
+
   if (this.checked) {
       console.log('Toggle ON');
       main.style.backgroundColor = "black";
@@ -27,14 +27,7 @@ document.querySelector('.toggle').addEventListener('change', function() {
       header.style.transition = '.5s';
       user.style.color = "white";
       user.style.transition = '.5s';
-      logbutton.style.color = "white";
-      logbutton.style.transition = '.5s';
-      icon.style.color = "white";
-      icon.style.transition = '.5s';
-      username.style.color = "white";
-      username.style.transition = '.5s';
-      logado.style.backgroundColor = "black";
-      logado.style.transition = '.5s';
+      // rest of your code
   } else {
       console.log('Toggle OFF');
       main.style.backgroundColor = "";
@@ -51,13 +44,13 @@ document.querySelector('.toggle').addEventListener('change', function() {
       header.style.transition = '.5s';
       user.style.color = "";
       user.style.transition = '.5s';
-      logbutton.style.color = "";
-      logbutton.style.transition = '.5s';
-      icon.style.color = "";
-      icon.style.transition = '.5s';
-      username.style.color = "";
-      username.style.transition = '.5s';
-      logado.style.backgroundColor = "";
-      logado.style.transition = '.5s';
+      // rest of your code
   }
+
+  // Se os elementos existirem, altere suas propriedades
+  if (logado) logado.style.backgroundColor = this.checked ? "black" : "";
+  if (logbutton) logbutton.style.color = this.checked ? "white" : "";
+  if (icon) icon.style.color = this.checked ? "white" : "";
+  if (username) username.style.color = this.checked ? "white" : "";
 });
+

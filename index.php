@@ -49,13 +49,20 @@ if(!isset($_SESSION)) {
                 <ul id="logout">
                     <li>
                         <?php else: ?>
-                            <p id="usunome">Olá, <?= $_SESSION['usuario'] ?> !</p>
-                            <li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>
-                            <li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>
-                            <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
-                            <li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
-                            <a href="./logout.php" id="logoutbtn">Logout</a>
-                            <a href="./logout.php"><span class="material-symbols-outlined">logout</span></a>
+                            
+                            <?php
+                                $usunome = 'usunome';
+                                $logoutbtn = 'logoutbutton';
+                                $master = 'material-symbols-outlined';
+                                echo "<p id='$usunome'>Olá, " . $_SESSION['usuario'] . " !</p>";
+                                echo "<li><a href='#'><img src='./imagens/logo-facebook.jpg' alt='Facebook' class='logos'></a></li>";
+                                echo "<li><a href='#'><img src='./imagens/logo-instagram.jpg' alt='Instagram' class='logos'></a></li>";
+                                echo "<li><a href='#'><img src='./imagens/x_logo.png' alt='Twitter' class='logos'></a></li>";
+                                echo "<li><a href='#'><img src='./imagens/whats_logo.png' alt='Whatsapp' class='logos'></a></li>";
+                                echo "<a href='./logout.php' id='$logoutbtn'>Logout</a>";
+                                echo "<a href='./logout.php'><span class='$master'>logout</span></a>";
+                            ?>
+                            
                     </li>
                         <label class="toggle-button">
                             <input type="checkbox" class="toggle">
