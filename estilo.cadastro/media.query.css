@@ -79,7 +79,7 @@
 @media screen and (min-width: 1349px) {
     header {
         background-color: rgb(27, 27, 27);
-        color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
         padding: 10px;
         box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.322);
     }
@@ -90,10 +90,6 @@
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-size: 3em;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.452);
-    }
-
-    #topo {
-        height: 50px;
     }
     
     #logo {
