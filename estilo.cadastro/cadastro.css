@@ -197,5 +197,7 @@ footer {
     background-color: rgb(27, 27, 27);
     color: white;
     text-align: center;
-    align-items: end;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }

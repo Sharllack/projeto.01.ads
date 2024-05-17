@@ -387,11 +387,11 @@ header h1 a {
     border-radius: 50%;
   }
 
-footer {
+  footer {
     background-color: rgb(27, 27, 27);
     color: white;
     text-align: center;
     position: fixed;
-    bottom: 0%;
+    bottom: 0;
     width: 100%;
 }

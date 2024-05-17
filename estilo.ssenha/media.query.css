@@ -29,9 +29,7 @@
 
     footer {
         font-size: .5em;
-        bottom: 0%;
-        position: absolute;
-        width: 100%;
+
     }
 }
 
@@ -55,8 +53,5 @@
 
     footer {
         font-size: .9em;
-        bottom: 0%;
-        position: absolute;
-        width: 100%;
     }
 }
