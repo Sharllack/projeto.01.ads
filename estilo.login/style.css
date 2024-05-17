@@ -107,8 +107,16 @@ header #img2 {
     padding: 8px;
     border-radius: 25px;
     border: none;
+    border-bottom: 2px solid lightgray;
     padding-right: 50px;
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.425);
+    outline: none;
+    transition: .5s;
+}
+
+.conteudo:focus {
+    border-bottom: 2px solid brown;
+    transition: .5s;
 }
 
 .esenha a {
@@ -163,6 +171,16 @@ header #img2 {
 
 .btn-cad:active {
     background-color: rgb(153, 152, 152);
+}
+
+.btn-login:hover, .btn-cad:hover{
+    transform: scale(1.05);
+    transition: .3s;
+}
+
+.btn-login:active, .btn-cad:active{
+    transform: scale(0.95);
+    transition: .3s;
 }
 
 footer {
