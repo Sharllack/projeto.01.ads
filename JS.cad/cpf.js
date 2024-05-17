@@ -31,22 +31,22 @@ function validarCPF(cpf) {
     return true;
 }
 
-// Exemplo de uso:
-const cpfExemplo = '123.456.789-09';
-if (validarCPF(cpfExemplo)) {
-} else {
-    console.log('CPF inválido.');
-}
+    function verificarCPF() {
+        const cpfInput = document.getElementById('cpf');
+        const cpf = cpfInput.value;
 
-        function verificarCPF() {
-            const cpfInput = document.getElementById('cpf');
-            const cpf = cpfInput.value;
-
-            if (validarCPF(cpf)) {
-            } else {
-                alert('CPF inválido.');
-            }
+        if (validarCPF(cpf)) {
+            document.getElementById('rescpf').innerHTML = "Tudo certo!";
+            document.getElementById('rescpf').style.color = "rgb(0, 255, 42)";
+            document.getElementById('rescpf').style.fontWeight = "bold";
+            document.getElementById('rescpf').style.float = "right";
+        } else {
+            document.getElementById('rescpf').innerHTML = "CPF inválido!";
+            document.getElementById('rescpf').style.color = "red";
+            document.getElementById('rescpf').style.fontWeight = "bold";
+            document.getElementById('rescpf').style.float = "right";
         }
+    }
 
 function formatacpf(v){
     v.value = v.value.replace(/(\d{3})(\d{3})(\d{3})(\d)/, '$1.$2.$3-$4')

@@ -77,13 +77,14 @@
             <label for="idmae">Nome Materno</label>
             <input type="text" name="nome_materno" placeholder="Nome Completo" id="idmae" required>
             <label for="cpf">CPF</label>
-            <input type="text" id="cpf" name="cpf" placeholder="Ex.: 123.456.789-09" onblur="verificarCPF()" onkeyup="formatacpf(this)" required>
+            <p id="rescpf"></p>
+            <input type="text" id="cpf" name="cpf" placeholder="Ex.: 123.456.789-09" onblur="verificarCPF()" onkeyup="formatacpf(this)" maxlength="11" required>
             <label for="idemail">E-mail</label>
             <input type="email" name="email" placeholder="E-mail" id="idemail" required>
             <label for="idtel">Telefone Celular</label>
-            <input type="tel" class="tel" name="telefone_celular" placeholder="Ex.: +XX (XX) XXXXX-XXXX" id="idtel" onkeyup="formataCell(this)" required>
+            <input type="tel" class="tel" name="telefone_celular" placeholder="Ex.: +XX (XX) XXXXX-XXXX" id="idtel" onkeyup="formataCell(this)" maxlength="13" required>
             <label for="idtelf">Telefone Fixo</label>
-            <input type="tel" class="tel" name="telefone_fixo" placeholder="Ex.: +XX (XX) XXXX-XXXX" id="idtelf" onkeyup="formataTel(this)" required>
+            <input type="tel" class="tel" name="telefone_fixo" placeholder="Ex.: +XX (XX) XXXX-XXXX" id="idtelf" onkeyup="formataTel(this)" maxlength="12" required>
             <label for="idcep">CEP</label>
             <input type="text" class="end" id="idcep" name="cep" placeholder="Ex.: XXXXX-XXX" onkeyup="formataCep(this)" required>
             <label for="idrua">Rua</label>

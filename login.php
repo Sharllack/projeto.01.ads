@@ -1,6 +1,8 @@
 <?php 
     include('./conexaolog.php');
 
+    $erro = '';
+
     if(isset($_POST['usuario']) || isset($_POST['senha'])) { //Verificar se existe a variável.
         
         $usu = $mysqli->real_escape_string($_POST['usuario']); //para limpar a str
@@ -24,7 +26,7 @@
             header("Location: index.php"); //para redirecionar a pág.
 
         } else {
-            echo  "<script>alert('Usuário ou senha incorretos!');</script>";
+            $erro = 'Usuário ou senha incorretos!';
         }
     }
 ?>
@@ -63,7 +65,7 @@
             <div class="field">
                 <input type="password" class="conteudo" name="senha" id="idsenha" placeholder="Senha"  required>
             </div>
-            <p id="res"></p>
+            <p id="erro" style="color: red; font-size:.8em; text-align:center;"><?php echo $erro; ?></p>
             <div class="esenha">
                 <a href="./opcoes.html">Esqueci a senha</a>
             </div>
