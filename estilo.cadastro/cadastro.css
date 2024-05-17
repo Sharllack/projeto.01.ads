@@ -16,16 +16,13 @@ body {
 }
 
 header {
-    background-color: rgb(27, 27, 27);
-    color: rgb(255, 255, 255);
-    padding: 5px;
-    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.322);
-}
+    background-color: rgb(212, 212, 212);
+    padding: 10px;
+    transition: .5s;
+    position: sticky;
+    top: -1px;
+    z-index: 10;
 
-header menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 header #title {
@@ -34,25 +31,94 @@ header #title {
 }
 
 header #img1 {
-    width: 60px;
+    width: 100px;
     transition: .5s;
 }
 
 header #img2 {
-    width: 60px;
-    height: 40px;
+    width: 100px;
+    height: 60px;
     margin-right: 50px;
     transition: .5s;
+}
+
+header.rolagem {
+    background-color: #6d453400;
+    box-shadow: none;
+    transition: .5s;
+}
+
+header.rolagem #img1 {
+    width: 80px;
+    transition: .5s;
+}
+
+header.rolagem #img2 {
+    width: 80px;
+    height: 55px;
+    transition: .5s;
+}
+
+header.rolagem div, header.rolagem div a, header.rolagem #pe a{
+    background-color: #6d453400;
+    transition: .5s;
+    text-shadow: none;
+}
+
+header.rolagem #pe, header.rolagem #burguer{
+    display: none;
+}
+
+header.rolagem .logos {
+    height: 15px;
+    width: 15px;
+    transition: .5s;
+}
+
+header.rolagem #usu {
+    font-size: 15px;
+    transition: .5s;
+}
+
+header.rolagem #logout {
+    font-size: 15px;
+}
+
+header.rolagem #openMenu, header.rolagem #closeMenu{
+    display: block;
+    transition: .5s;
+}
+
+header h1 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin-top: 11px;
+}
+
+
+#topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(212, 212, 212);
+    margin: -10px;
 }
 
 #shield img {
     margin-right: 5px;  
 }
 
+#logo {
+    margin-right: 35px;
+}
+
 #logo img {
     vertical-align: middle;
     width: 25px;
     height: 25px;
+    margin: 5px;
 }
 
 .container {
