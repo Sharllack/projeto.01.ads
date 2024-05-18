@@ -37,13 +37,13 @@ if(!isset($_SESSION)) {
                         <li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>
                         <li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>
                         <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
-                        <li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
+                        <li><a href="https://wa.me/5521990420932"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
                     <?php else: ?>
                         <p class="topolog">Olá, <?=$_SESSION['usuario']?>!</p>
                         <li><a href="#"><img src="./imagens/logo-facebook.jpg" alt="Facebook" class="logos"></a></li>
                         <li><a href="#"><img src="./imagens/logo-instagram.jpg" alt="Instagram" class="logos"></a></li>
                         <li><a href="#"><img src="./imagens/x_logo.png" alt="Twitter" class="logos"></a></li>
-                        <li><a href="#"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
+                        <li><a href="https://wa.me/5521990420932"><img src="./imagens/whats_logo.png" alt="Whatsapp" class="logos"></a></li>
                         <li><a href="./logout.php" class="topocad">Logout</a></li>
                         <li><a href="./logout.php"><span class="material-symbols-outlined">logout</span></a></li>
                     <?php endif; ?>
