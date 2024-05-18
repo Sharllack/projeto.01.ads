@@ -120,6 +120,7 @@ if(!isset($_SESSION)) {
     <footer>Site criado por <strong>Larissa Menezes</strong> e <strong>Lucas Menezes</strong> para o Projeto de ADS.</footer>
     <script src="./JS.com/darkmode.js"></script>
     <script src="./JS.com/comprar.js"></script>
+    <script src="./JS.com/compra.js"></script>
   
 </body>
 </html>
