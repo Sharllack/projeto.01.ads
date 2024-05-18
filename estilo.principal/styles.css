@@ -661,10 +661,6 @@ footer {
     background-image: url('../imagens/pexels-felixmittermeier-956981.jpg');
   }
 
-  input:focus + .slider1 {
-    box-shadow: 0 0 1px #073260;
-  }
-
   input:checked + .slider1:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
