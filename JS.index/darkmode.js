@@ -1,10 +1,11 @@
 document.querySelector('.toggle').addEventListener('change', function() {
-  var main = document.getElementById('main');
-  var topo = document.getElementById('topo');
-  var header = document.getElementById('header');
-  var log = document.querySelector('.topolog');
-  var cad = document.querySelector('.topocad');
-  var usu = document.querySelector('#usu');
+  const main = document.getElementById('main');
+  const topo = document.getElementById('topo');
+  const header = document.getElementById('header');
+  const log = document.querySelector('.topolog');
+  const cad = document.querySelector('.topocad');
+  const usu = document.querySelector('#usu');
+  const logado = document.getElementById('logado');
 
   if (this.checked) {
       console.log('Toggle ON');
@@ -20,6 +21,8 @@ document.querySelector('.toggle').addEventListener('change', function() {
       cad.style.transition = '.5s';
       usu.style.backgroundColor = "black";
       usu.style.transition = '.5s';
+      logado.style.backgroundColor = "black";
+      logado.style.transition = '.5s';
       
   } else {
       console.log('Toggle OFF');
@@ -35,5 +38,7 @@ document.querySelector('.toggle').addEventListener('change', function() {
       cad.style.transition = '.5s';
       usu.style.backgroundColor = "";
       usu.style.transition = '.5s';
+      logado.style.backgroundColor = "";
+      logado.style.transition = '.5s';
 };
 });

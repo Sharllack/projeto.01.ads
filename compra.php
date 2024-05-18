@@ -29,7 +29,6 @@ if(!isset($_SESSION)) {
             </h1>
             <button class="hamburguer"></button>
             <section id="logado">
-                <div id="user"></div>
                 <ul id="usu">
                     <?php if(!isset($_SESSION['usuario'])):?>
                         <li><a href="./login.php" class="topolog">Login &#x1F464</a></li>

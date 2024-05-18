@@ -40,6 +40,7 @@ body {
 }
 
 #usu {
+    background-color: rgb(212, 212, 212);
     display: flex;
     align-items: center;
     font-size: .9em;
@@ -311,12 +312,13 @@ main {
     height: 60%;
     display: block;
     margin: auto;
+    border-radius: 15px;
 }
 
 .manual-navigation {
     position: absolute;
     width: 90%;
-    margin-top: -140px;
+    margin-top: -150px;
     display: flex;
     justify-content: center;
 }
@@ -364,7 +366,7 @@ main {
 .navigation-auto{
     position: absolute;
     width: 90%;
-    margin-top: 160px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
 }
@@ -615,6 +617,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 10000;
 }
 
 .toggle-button {
