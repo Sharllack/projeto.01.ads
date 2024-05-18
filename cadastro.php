@@ -58,7 +58,7 @@
             </a>
             <div id="logo">
                 <img src="./imagens/shield.png" alt="shield" id="shield">
-                <span>Ambiente 100% seguro</span>
+                <span id="span">Ambiente 100% seguro</span>
             </div>
         </menu>
     </header>
@@ -112,6 +112,7 @@
         </form>
     </div>
     <footer>Site criado por <strong>Larissa Menezes</strong> e <strong>Lucas Menezes</strong> para o Projeto de ADS.</footer>
+    <script src="./JS.cad/darkmode.js"></script>
     <script src="./JS.cad/cep.js"></script>
     <script src="./JS.cad/cpf.js"></script>
     <script src="./JS.cad/tels.js"></script>

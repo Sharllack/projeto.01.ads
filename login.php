@@ -76,5 +76,6 @@
         </form>
     </div>
     <footer>Site criado por <strong>Larissa Menezes</strong> e <strong>Lucas Menezes</strong> para o Projeto de ADS.</footer>
+    <script src="./darkMode/darkmode.js"></script>
 </body>
 </html>
