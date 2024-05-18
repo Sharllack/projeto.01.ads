@@ -4,8 +4,9 @@ const log = document.querySelector('.topolog');
 const cad = document.querySelector('.topocad');
 const usu = document.querySelector('#usu');
 const logado = document.getElementById('logado');
+const toggle = document.querySelector('.toggle');
 
-document.querySelector('.toggle').addEventListener('change', function() {  
+toggle.addEventListener('change', function() {  
     if (this.checked) {
         console.log('Toggle ON');
         topo.style.backgroundColor = "black";
@@ -57,6 +58,9 @@ document.querySelector('.toggle').addEventListener('change', function() {
     usu.style.transition = '.5s';
     logado.style.backgroundColor = "black";
     logado.style.transition = '.5s';
+
+    toggle.checked = true;
+
       
   } else {
     topo.style.backgroundColor = "";

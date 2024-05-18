@@ -5,16 +5,17 @@ const log = document.querySelector('.topolog');
 const cad = document.querySelector('.topocad');
 const usu = document.querySelector('#usu');
 const logado = document.getElementById('logado');
-const icon =document.querySelector('.material-symbols-outlined');
+const icon = document.querySelector('.material-symbols-outlined');
+const toggle = document.querySelector('.toggle');
 
-document.querySelector('.toggle').addEventListener('change', function() {
+toggle.addEventListener('change', function() {
   if (this.checked) {
       console.log('Toggle ON');
       main.style.backgroundColor = "black";
       main.style.transition = '.5s';
       topo.style.backgroundColor = "black";
       topo.style.transition = '.5s';
-      header.style.backgroundColor = "black"
+      header.style.backgroundColor = "black";
       header.style.transition = ".5s";
       log.style.color = "white";
       log.style.transition = '.5s';
@@ -53,6 +54,8 @@ document.querySelector('.toggle').addEventListener('change', function() {
 };
 });
 
+const slidePref = localStorage.getItem('slide');
+
 const darkModePreference = localStorage.getItem('darkMode');
 if (darkModePreference === 'on') {
     main.style.backgroundColor = "black";
@@ -71,6 +74,8 @@ if (darkModePreference === 'on') {
     logado.style.transition = '.5s';
     icon.style.color = "white";
     icon.style.transition = '.5s';
+
+    toggle.checked = true;
     
 } else {
     main.style.backgroundColor = "";

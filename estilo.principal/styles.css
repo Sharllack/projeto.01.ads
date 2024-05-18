@@ -662,6 +662,7 @@ footer {
   }
 
   input:checked + .slider1:before {
+    content: attr(data-content);
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
