@@ -80,10 +80,6 @@ body { font-family: Arial, sans-serif;
     transition-duration: 1s;
 }
 
-#user {
-    font-size: 1.2em;
-}
-
 #logoutbtn:hover {
     text-decoration: underline;
 }
