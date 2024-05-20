@@ -152,7 +152,7 @@ header h1 {
     }
 }
 
-input[type="text"] {
+input[type="text"], input[type="number"] {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -164,7 +164,7 @@ input[type="text"] {
     transition: .5s;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="number"]:focus {
     border-bottom: 2px solid brown;
     transition: .5s;
 }
