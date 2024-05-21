@@ -122,7 +122,6 @@ header h1 {
 }
 
 .container {
-    max-width: 400px;
     margin: auto;
     padding: 20px;
     background-color: black;
@@ -226,4 +225,16 @@ input[type="file"] {
     font-weight: bold;
     border-radius: 25px;
     cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr, th, td {
+    border: 1px solid black;
+}
+
+img {
+    width: 50px;
 }
