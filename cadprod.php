@@ -4,6 +4,20 @@
     include('./conexCadProd.php');
     mysql::site();
 
+    if(isset($_GET['deletar'])) {
+    
+        $protocolo = intval($_GET['deletar']);
+        $sql_query = $mysqli->query("SELECT * FROM prod WHERE protocolo = '$protocolo'") or die($mysqli->error);
+        $arquivo = $sql_query->fetch_assoc();
+    
+        if(unlink($arquivo['imgPrin']) && unlink($arquivo['mini1']) && unlink($arquivo['mini2'])) {
+            $deu_certo = $mysqli->query("DELETE FROM prod WHERE protocolo = '$protocolo'") or die($mysqli->error);
+            if($deu_certo)
+                echo "<p>Arquivo deletado com sucesso!!</p>";
+        }
+        
+    }
+
     if(isset($_POST['acao']) && $_POST['form'] == 'f_form') {
         $protocolo = $_POST['protocolo'];
         $nomeDoProduto = $_POST['nomeDoProduto'];
@@ -43,14 +57,15 @@
             $deu_certo3 = move_uploaded_file($min2['tmp_name'], $path3);
     
             if($deu_certo1 && $deu_certo2 && $deu_certo3) {
-                $mysqli->query("INSERT INTO prod (protocolo, nome, preco, descricao, imgPrin, mini1, mini2) VALUES('$protocolo' ,'$nomeDoProduto', '$preco', '$descricao', '$path1', '$path2', '$path3')") or die($mysqli->error);
+                $mysqli->query("INSERT INTO prod (protocolo ,nome, preco, descricao, imgPrin, mini1, mini2) VALUES('$protocolo' ,'$nomeDoProduto', '$preco', '$descricao', '$path1', '$path2', '$path3')") or die($mysqli->error);
                     echo "<p>sucesso!</p>";
                 } else {
                     echo "<p>fracasso!</p>";
                 };
         }
 
-$sql_query = $mysqli->query("SELECT * FROM prod") or die($mysqli->error);
+$sql_query = "SELECT * FROM prod" or die($mysqli->error);
+$result = $mysqli->query($sql_query);
 
 ?>
 
@@ -61,6 +76,21 @@ $sql_query = $mysqli->query("SELECT * FROM prod") or die($mysqli->error);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./estilo.cadprod/style.css">
+    <style>
+        table {
+            margin-top: 15px;
+            border-collapse: collapse;
+            width: 100%;
+            }
+
+        tr, th, td {
+            border: 2px solid white;
+            }
+
+        img {
+            width: 50px;
+            }
+    </style>
 </head>
 <body>
     <header>
@@ -108,19 +138,21 @@ $sql_query = $mysqli->query("SELECT * FROM prod") or die($mysqli->error);
                 <th>Imagem Principal</th>
                 <th>Miniatura 1</th>
                 <th>Miniatura 2</th>
+                <th></th>
             </thead>
             <tbody>
             <?php 
-                while($imgPrin = $sql_query->fetch_assoc() && $min1 = $sql_query->fetch_assoc() && $min2 = $sql_query->fetch_assoc()); {
+                while($row = $result->fetch_assoc()) {
                 ?>
                 <tr>
-                    <td><?php echo $protocolo['protocolo'];?></td>
-                    <td><?php echo $nomeDoProduto['nome'];?></td>
-                    <td><?php echo $preco['preco'];?></td>
-                    <td><?php echo $descricao['descricao']?></td>
-                    <td><img height="50px" src="<?php echo $imgPrin['imgPrin'];?>" alt=""></img></td>
-                    <td><img height="50px" src="<?php echo $min1['mini1'];?>" alt=""></img></td>
-                    <td><img height="50px" src="<?php echo $min2['mini2'];?>" alt=""></img></td>
+                    <td><?php echo $row['protocolo'];?></td>
+                    <td><?php echo $row['nome'];?></td>
+                    <td><?php echo $row['preco'];?></td>
+                    <td><?php echo $row['descricao']?></td>
+                    <td><img height="50px" src="<?php echo $row['imgPrin'];?>" alt=""></img></td>
+                    <td><img height="50px" src="<?php echo $row['mini1'];?>" alt=""></img></td>
+                    <td><img height="50px" src="<?php echo $row['mini2'];?>" alt=""></img></td>
+                    <th><a href="./cadprod.php?deletar=<?php echo $row['protocolo'];?>">Deletar</a></th>
                 </tr>
                 <?php 
                 }

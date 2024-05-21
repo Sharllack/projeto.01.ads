@@ -226,15 +226,3 @@ input[type="file"] {
     border-radius: 25px;
     cursor: pointer;
 }
-
-table {
-    border-collapse: collapse;
-}
-
-tr, th, td {
-    border: 1px solid black;
-}
-
-img {
-    width: 50px;
-}
