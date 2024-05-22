@@ -80,6 +80,7 @@ $result = $mysqli->query($sql_query);
 
         tr, th, td {
             border: 2px solid white;
+            text-align: center;
             }
 
         img {
