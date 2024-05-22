@@ -1,9 +1,15 @@
 <?php
 
+use LDAP\Result;
+
 if(!isset($_SESSION)) {
     session_start();
 };
 
+include('./conexCadProd.php');
+
+$sql_query = "SELECT * FROM prod" or die($mysqli->error);
+$result = $mysqli->query($sql_query);
 
 ?>
 
@@ -156,11 +162,13 @@ if(!isset($_SESSION)) {
                 </div>
             </div>
             <section class="prod">
+                <?php while($row = $result->fetch_assoc()) {
+                ?>
                 <div class="prod-item">
-                    <a href="./compra.php" onclick="selecionarProduto('p6')" id="p6"><img src="./imagens/imagensprojeto/capacete frente.webp" alt="capacete"></a>
-                    <h2 id="pro6">R$1.799,90</h2>
+                    <a href="./compra.php" onclick="selecionarProduto('p6')" id="p6"><img src="<?php echo $row['imgPrin']; ?>" alt="capacete"></a>
+                    <h2 id="pro6"><?php echo 'R$' . number_format($row['preco'], 2, ",", "."); ?></h2>
                     <hr class="hr1">
-                    <p><a href="./compra.php" onclick="selecionarProduto('p6')" id="p6">Helmet Riddell Speed Icon Preto Recondicionado e Recertificado</a></p>
+                    <p><a href="./compra.php" onclick="selecionarProduto('p6')" id="p6"><?php echo $row['descricao']; ?></a></p>
                     <hr class="hr2">
                     <a href="./compra.php" onclick="selecionarProduto('p6')" id="p6" class="icons" >
                         <span class="material-symbols-outlined">
@@ -168,7 +176,11 @@ if(!isset($_SESSION)) {
                         </span>
                     </a>
                 </div>
-                <div class="prod-item">
+                <?php
+                }
+                ?>
+                <!-- <div class="prod-item">
+
                     <a href="./compra.php" onclick="selecionarProduto('p5')" id="p5"><img src="./imagens/imagensprojeto/capacete1 frente.webp" alt="capacete"></a>
                     <h2 id="pro5">R$2.499,90</h2>
                     <hr class="hr1">
@@ -275,7 +287,7 @@ if(!isset($_SESSION)) {
                         add_shopping_cart info
                         </span>
                     </a>
-                </div>
+                </div> -->
             </section>
         </main>
         <footer>Site criado por <strong>Larissa Menezes</strong> e <strong>Lucas Menezes</strong> para o Projeto de ADS.</footer>

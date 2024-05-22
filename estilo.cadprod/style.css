@@ -130,25 +130,6 @@ header h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin-bottom: 25px;
     margin-top: 10px;
-
-    animation-name: fadeInDown;
-    -webkit-animation-name: fadeInDown;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
-}
-
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translate3d(0, -100%, 0);
-        -webkit-transform: translate3d(0, -100%, 0);
-    }
-
-    100% {
-        opacity: 1;
-        transform: none;
-        -webkit-transform: none;
-    }
 }
 
 input[type="text"], input[type="number"] {

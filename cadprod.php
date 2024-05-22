@@ -1,8 +1,6 @@
 <?php 
 
-    include('./conexaocadprod.php');
     include('./conexCadProd.php');
-    mysql::site();
 
     if(isset($_GET['deletar'])) {
     
@@ -18,15 +16,12 @@
         
     }
 
-    if(isset($_POST['acao']) && $_POST['form'] == 'f_form') {
-        $protocolo = $_POST['protocolo'];
-        $nomeDoProduto = $_POST['nomeDoProduto'];
-        $preco = $_POST['preco'];
-        $descricao = $_POST['descricao'];
-    }
 
-
-        if(isset($_FILES['imgPrin']) && isset($_FILES['min1']) && isset($_FILES['min2'])) {
+        if(isset($_FILES['imgPrin']) && isset($_FILES['min1']) && isset($_FILES['min2']) && isset($_POST['nomeDoProduto']) && isset($_POST['preco']) && isset($_POST['descricao'])) {
+            $protocolo = $_POST['protocolo'];
+            $nomeDoProduto = $_POST['nomeDoProduto'];
+            $preco = $_POST['preco'];
+            $descricao = $_POST['descricao'];
             $imgPrin = $_FILES['imgPrin'];
             $min1 = $_FILES['min1'];
             $min2 = $_FILES['min2'];
@@ -114,19 +109,21 @@ $result = $mysqli->query($sql_query);
             <label for="idnome">Nome do Produto</label>
             <input type="text" name="nomeDoProduto" placeholder="Nome do Produto" id="idnome" required>
             <label for="idPreco">Preço</label>
-            <input type="number" id="idPreco" name="preco" placeholder="Valor do Produto"
+            <input type="text" id="idPreco" name="preco" placeholder="Valor do Produto"
             step="0.001" required>
             <label for="idDesc">Descrição</label>
             <input type="text" name="descricao" placeholder="descrição do Produto" id="idDesc" required>
+            <label for="idImgPrin">Imagem Principal</label>
             <label for="idImgPrin" class="file"><span class="span1">Imagem Principal</span><span class="span">SELECIONAR</span></label><br>
             <input multiple type="file" name="imgPrin" id="idImgPrin">
+            <label for="idmin1">Miniatura 1</label>
             <label for="idmin1" class="file"><span class="span2">Miniatura 1</span><span class="span">SELECIONAR</span></label><br>
             <input multiple type="file" name="min1" id="idmin1">
+            <label for="idmin2">Miniatura 2</label>
             <label for="idmin2" class="file"><span class="span3">Miniatura 2</span><span class="span">SELECIONAR</span></label><br>
             <input multiple type="file" name="min2" id="idmin2">
             <button type="submit" name="acao" id="idAcao">CADASTRAR</button>
             <button type="reset">LIMPAR</button>
-            <input type="hidden" name="form" value="f_form">
         </form>
 
         <table>
