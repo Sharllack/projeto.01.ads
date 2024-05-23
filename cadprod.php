@@ -104,7 +104,7 @@ $result = $mysqli->query($sql_query);
         </menu>
     </header>
     <div class="container">
-        <form  enctype="multipart/form-data" action="" method="post">
+        <form  enctype="multipart/form-data" method="post">
             <label for="idProtocolo">Protocolo do Produto</label>
             <input type="text" name="protocolo" placeholder="Número do Protocolo (Pode ficar vazio)" id="idnome">
             <label for="idnome">Nome do Produto</label>
