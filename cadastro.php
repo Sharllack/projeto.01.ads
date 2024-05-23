@@ -86,6 +86,7 @@
             <label for="idtelf">Telefone Fixo</label>
             <input type="tel" class="tel" name="telefone_fixo" placeholder="Ex.: +XX (XX) XXXX-XXXX" id="idtelf" onkeyup="formataTel(this)" maxlength="12" required>
             <label for="idcep">CEP</label>
+            <p id=rescep></p>
             <input type="text" class="end" id="idcep" name="cep" placeholder="Ex.: XXXXX-XXX" onkeyup="formataCep(this)" required>
             <label for="idrua">Rua</label>
             <input type="text" class="end" name="rua" id="idrua" placeholder="Rua" required>
@@ -104,7 +105,7 @@
             <label for="idsen">Senha</label>
             <input type="password" name="senha" placeholder="Senha com 8 caracteres" id="idsen" maxlength="8" minlength="8" required>
             <label for="idcsen">Confirme a senha</label>
-            <input type="password" name="confirmacao_senha" placeholder="Confirmação da Senha" id="idcsen" maxlength="8" minlength="8" required>
+            <input type="password" name="confirmacao_senha" placeholder="Confirmação da Senha" id="idcsen" maxlength="8" minlength="8" required onblur="confirmarSenha(this)">
             <p name="p"></p>
             <button type="submit" name="acao">Enviar</button>
             <button type="reset">Limpar Tela</button>
@@ -116,5 +117,6 @@
     <script src="./JS.cad/cep.js"></script>
     <script src="./JS.cad/cpf.js"></script>
     <script src="./JS.cad/tels.js"></script>
+    <script src="./JS.cad/cSenha.js"></script>
 </body>
 </html>
