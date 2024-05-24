@@ -67,7 +67,7 @@ $result = $mysqli->query($sql_query);
     <menu id="pe">
         <ul>
             <li class="dropdown">
-                <a href="#">Luvas</a>
+                <a href="#" class = "dropname">Luvas</a>
 
                 <div class="dropdown-menu">
                     <a href="./compra.php" id="p1" onclick="selecionarProduto('p1')">F8 - Under Armour</a>
@@ -76,7 +76,7 @@ $result = $mysqli->query($sql_query);
             
             </li>
             <li class="dropdown">
-                <a href="#">Chuteiras</a>
+                <a href="#" class = "dropname">Chuteiras</a>
 
                 <div class="dropdown-menu">
                     <a href="./compra.php" id="p3" onclick="selecionarProduto('p3')">Under Armour Spotlight RM 2.0</a>
@@ -85,7 +85,7 @@ $result = $mysqli->query($sql_query);
             
             </li>
             <li class="dropdown">
-                <a href="#">Capacetes</a>
+                <a href="#" class = "dropname">Capacetes</a>
 
                 <div class="dropdown-menu">
                     <a href="./compra.php" id="p5" onclick="selecionarProduto('p5')">Helmet Schutt F7</a>
@@ -95,7 +95,7 @@ $result = $mysqli->query($sql_query);
 
             </li>
             <li class="dropdown">
-                <a href="#">Shoulder pad</a>
+                <a href="#" class = "dropname">Shoulder pad</a>
 
             <div class="dropdown-menu">
                 <a href="./compra.php" id="p7" onclick="selecionarProduto('p7')">Surge Youth Riddell</a>
@@ -105,7 +105,7 @@ $result = $mysqli->query($sql_query);
                     
             </li>
             <li class="dropdown">
-                <a href="#">Bolas</a>
+                <a href="#" class = "dropname">Bolas</a>
 
             <div class="dropdown-menu">
                 <a href="./compra.php" id="p10" onclick="selecionarProduto('p10')">NFL Super Grip Wilson</a>
@@ -115,7 +115,7 @@ $result = $mysqli->query($sql_query);
             </li>
 
             <li class="dropdown">
-                <a href="#">Nossa história</a>
+                <a href="#" class = "dropname">Nossa história</a>
 
             </li>
         </ul>
