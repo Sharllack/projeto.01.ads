@@ -5,18 +5,17 @@
 
     if(isset($_POST['usuario']) || isset($_POST['senha'])) { //Verificar se existe a variável.
         
-        $usu = $mysqli->real_escape_string($_POST['usuario']); //para limpar a str
-        $sen = $mysqli->real_escape_string($_POST['senha']); //para limpar a str
+        // $usu = $mysqli->real_escape_string($_POST['usuario']); //para limpar a str
+        // $sen = $mysqli->real_escape_string($_POST['senha']); //para limpar a str
 
-        $sql_code = "SELECT * FROM dados_usu WHERE usuario = '$usu' AND senha = '$sen'";
+        $usu = $_POST['usuario'];
+        $sen = $_POST['senha'];
+
+        $sql_code = "SELECT * FROM dados_usu WHERE usuario = '$usu' LIMIT 1";
         $sql_query = $mysqli->query($sql_code) or die ("Falha na execução do código SQL: " . $mysqli->error);
-
-        $quantidade = $sql_query->num_rows;
-
-        if($quantidade == 1) {
-            
-            $usuario = $sql_query->fetch_assoc();
-
+    
+        $usuario = $sql_query->fetch_assoc();
+        if(password_verify($sen, $usuario['Senha'])) {
             if(!isset($_SESSION)) {
                 session_start();
             }

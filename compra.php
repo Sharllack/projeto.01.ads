@@ -17,7 +17,7 @@ if(!isset($_SESSION)) {
     <link rel="stylesheet" href="./estilo.comprar/media.queries.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
-<body>
+<body onresize="mudouTamanho()">
 <header id="header">
         <menu id="topo">
             <h1>
@@ -118,6 +118,7 @@ if(!isset($_SESSION)) {
     </div>
 
     <footer>Site criado por <strong>Larissa Menezes</strong> e <strong>Lucas Menezes</strong> para o Projeto de ADS.</footer>
+    <script src="./JS.com/burguer.js"></script>
     <script src="./JS.com/darkmode.js"></script>
     <script src="./JS.com/comprar.js"></script>
     <script src="./JS.com/compra.js"></script>
