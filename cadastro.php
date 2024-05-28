@@ -1,3 +1,68 @@
+<?php
+
+include('./conexaocad.php');
+mysql::site();
+
+$cpf_error = $email_error = $cell_error = $usuario_error = '';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST['nome'];
+    $data = $_POST['data_nascimento'];
+    $sexo = $_POST['sexo'];
+    $mae = $_POST['nome_materno'];
+    $cpf = $_POST['cpf'];
+    $email = $_POST['email'];
+    $cell = $_POST['telefone_celular'];
+    $tel = $_POST['telefone_fixo'];
+    $cep = $_POST['cep'];
+    $rua = $_POST['rua'];
+    $numero = $_POST['num'];
+    $complemento = $_POST['comp'];
+    $bairro = $_POST['bairro'];
+    $cidade = $_POST['cdd'];
+    $estado = $_POST['estado'];
+    $usuario = $_POST['login'];
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+
+    // Verificar se o CPF já existe
+    $sql_check_cpf = mysql::site()->prepare("SELECT * FROM `dados_usu` WHERE `cpf` = ?");
+    $sql_check_cpf->execute(array($cpf));
+    if ($sql_check_cpf->rowCount() > 0) {
+        $cpf_error = "CPF já cadastrado.";
+    }
+
+    // Verificar se o e-mail já existe
+    $sql_check_email = mysql::site()->prepare("SELECT * FROM `dados_usu` WHERE `email` = ?");
+    $sql_check_email->execute(array($email));
+    if ($sql_check_email->rowCount() > 0) {
+        $email_error = "E-mail já cadastrado.";
+    }
+
+    // Verificar se o número de celular já existe
+    $sql_check_cell = mysql::site()->prepare("SELECT * FROM `dados_usu` WHERE `cell` = ?");
+    $sql_check_cell->execute(array($cell));
+    if ($sql_check_cell->rowCount() > 0) {
+        $cell_error = "Número de celular já cadastrado.";
+    }
+
+    // Verificar se o nome de usuário já existe
+    $sql_check_usuario = mysql::site()->prepare("SELECT * FROM `dados_usu` WHERE `usuario` = ?");
+    $sql_check_usuario->execute(array($usuario));
+    if ($sql_check_usuario->rowCount() > 0) {
+        $usuario_error = "Nome de usuário já cadastrado.";
+    }
+
+    // Se não houver erros, inserir os dados
+    if (empty($cpf_error) && empty($email_error) && empty($cell_error) && empty($usuario_error)) {
+        form::cadastrar($nome, $data, $sexo, $mae, $cpf, $email, $cell, $tel, $cep, $rua, $numero, $complemento, $bairro, $cidade, $estado, $usuario, $senha);
+
+        header("Location: login.php");
+        exit; // Certifique-se de sair após o redirecionamento
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -26,7 +91,7 @@
     </header>
     <div class="container">
         <h2 name="h2">Cadastro</h2>
-        <form id="form" action="./cad.php" method="post">
+        <form id="form" action="" method="post">
             <label for="idnome">Nome</label>
             <input type="text" name="nome" placeholder="Nome completo" id="idnome" minlength="15" maxlength="80" required>
             <label for="idata">Data de Nascimento</label>
@@ -40,11 +105,14 @@
             <input type="text" name="nome_materno" placeholder="Nome Completo" id="idmae" required>
             <label for="cpf">CPF</label>
             <input type="text" id="cpf" name="cpf" placeholder="Ex.: 123.456.789-09" onblur="verificarCPF()" onkeyup="formatacpf(this)" maxlength="14" required>
+            <span><?php echo $cpf_error; ?></span><br>
             <p id="rescpf"></p>
             <label for="idemail" id="labemail">E-mail</label>
             <input type="email" name="email" placeholder="E-mail" id="idemail" required>
+            <span><?php echo $email_error; ?></span><br>
             <label for="idtel">Telefone Celular</label>
             <input type="tel" class="tel" name="telefone_celular" placeholder="Ex.: +XX (XX) XXXXX-XXXX" id="idtel" onkeyup="formataCell(this)" maxlength="13" required>
+            <span><?php echo $cell_error; ?></span><br>
             <label for="idtelf">Telefone Fixo</label>
             <input type="tel" class="tel" name="telefone_fixo" placeholder="Ex.: +XX (XX) XXXX-XXXX" id="idtelf" onkeyup="formataTel(this)" maxlength="12" required>
             <label for="idcep">CEP</label>
@@ -64,6 +132,7 @@
             <input type="text" class="end" name="estado" id="idest" placeholder="Estado" required>
             <label for="idlogin">Login</label>
             <input type="text" name="login" placeholder="Login com 6 caracteres" id="idlogin" maxlength="6" minlength="6" required>
+            <span><?php echo $usuario_error; ?></span><br>
             <label for="idsen">Senha</label>
             <input type="password" name="senha" placeholder="Senha com 8 caracteres" id="idsen" maxlength="8" minlength="8" required>
             <label for="idcsen">Confirme a senha</label>
