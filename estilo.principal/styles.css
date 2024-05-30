@@ -396,6 +396,25 @@ main {
     background-color: white;
 }
 
+.carrossel {
+    box-shadow: 2px 2px 4px black;
+    overflow: hidden;
+    height: 200px;
+    width: 200px;
+}
+
+.container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+}
+
+.container img {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+}
+
 .prod3 img {
     width: 100%;
     display: block;
