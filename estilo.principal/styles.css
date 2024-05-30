@@ -360,10 +360,6 @@ main {
     margin-left: -50%;
 }
 
-#radio4:checked ~ .first {
-    margin-left: -75.61%;
-}
-
 .navigation-auto div {
     border: 2px solid #20a6ff;
     padding: 5px;

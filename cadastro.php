@@ -55,6 +55,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Se não houver erros, inserir os dados
     if (empty($cpf_error) && empty($email_error) && empty($cell_error) && empty($usuario_error)) {
         form::cadastrar($nome, $data, $sexo, $mae, $cpf, $email, $cell, $tel, $cep, $rua, $numero, $complemento, $bairro, $cidade, $estado, $usuario, $senha);
+        
+        sleep(2);
 
         header("Location: login.php");
         exit; // Certifique-se de sair após o redirecionamento
