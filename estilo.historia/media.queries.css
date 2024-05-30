@@ -1,0 +1,712 @@
+@charset "UTF-8";
+
+@media screen and (max-width: 375px) {
+
+    .hamburguer {
+        display: block;
+        z-index: 1;
+    }
+
+    #usu{
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(212, 212, 212);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    #redes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #usu a, #redes a{
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    #usu li:nth-child(1) a, #redes li:nth-child(1) a {
+        transition: .5s .2s;
+    }
+
+    #redes li:nth-child(2) a {
+        transition: .5s .4s;
+    }
+
+    #redes li:nth-child(3) a {
+        transition: .5s .6s;
+    }
+
+    #redes li:nth-child(4) a {
+        transition: .5s .8s;
+    }
+
+    #redes li:nth-child(5) a {
+        transition: .5s 1s;
+    }
+
+    #usu li:nth-child(6) a, #redes li:nth-child(6) a {
+        transition: .5s 1.2s;
+    }
+
+    #topo.active #usu, #topo.active #redes  {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    #topo.active #usu a, #topo.active #redes a {
+        opacity: 1;
+    }
+
+    #topo.active .hamburguer {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    #topo.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #topo.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #logado div {
+        margin-left: 0px;
+    }
+
+    #logado{
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    #logado div {
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    #logado div:nth-child(1){
+        transition: .5s .2s;
+    }
+
+    #logado div:nth-child(2){
+        transition: .5s .4s;
+    }
+
+    #topo.active #logado  {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    #topo.active #logado div {
+        opacity: 1;
+    }
+
+    #logout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logout-button {
+        margin-bottom: 30px;
+    }
+
+    header {
+        position: sticky;
+        top: -1px;
+    }
+
+    header h1 {
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 1em;
+    }
+
+    #pe {
+        display: none;
+        text-align: center;
+    }
+
+    #pe a {
+        width: 100vw;
+        align-items: center;
+    }
+
+    #title {
+        margin: auto;
+    }
+
+    #title #img1 {
+        width: 40px;
+    }
+
+    #title #img2 {
+        width: 60px;
+        height: 40px;
+    }
+
+    #idpes {
+        display: none;
+    }
+    header h1 hr {
+        display: none;
+    }
+
+    footer {
+        font-size: .5em;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 538px) {
+    
+    .hamburguer {
+        display: block;
+        z-index: 1;
+    }
+
+    #usu{
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(212, 212, 212);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    #redes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #usu a, #redes a{
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    #usu li:nth-child(1) a, #redes li:nth-child(1) a {
+        transition: .5s .2s;
+    }
+
+    #redes li:nth-child(2) a {
+        transition: .5s .4s;
+    }
+
+    #redes li:nth-child(3) a {
+        transition: .5s .6s;
+    }
+
+    #redes li:nth-child(4) a {
+        transition: .5s .8s;
+    }
+
+    #redes li:nth-child(5) a {
+        transition: .5s 1s;
+    }
+
+    #usu li:nth-child(6) a, #redes li:nth-child(6) a {
+        transition: .5s 1.2s;
+    }
+
+    #topo.active #usu, #topo.active #redes  {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    #topo.active #usu a, #topo.active #redes a {
+        opacity: 1;
+    }
+
+    #topo.active .hamburguer {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    #topo.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #topo.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #logado div {
+        margin-left: 0px;
+    }
+
+    #logado{
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    #logout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logout-button {
+        margin-bottom: 30px;
+    }
+
+    #logado div {
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    #logado div:nth-child(1){
+        transition: .5s .2s;
+    }
+
+    #logado div:nth-child(2){
+        transition: .5s .4s;
+    }
+
+    #topo.active #logado  {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    #topo.active #logado div {
+        opacity: 1;
+    }
+
+    header {
+        position: sticky;
+        top: -1px;
+        padding: 0px;
+    }
+
+    header h1 {
+        justify-content: space-between;
+        font-size: 1.5em;
+    }
+
+    #pe {
+        display: none;
+    }
+
+    #pe a {
+        width: 100vw;
+    }
+
+    #title {
+        margin: auto;
+    }
+
+    #title #img1 {
+        width: 50px;
+    }
+
+    #title #img2 {
+        width: 50px;
+        height: 40px;
+    }
+
+    #idpes {
+        display: none;
+    }
+
+    footer {
+        font-size: .6em;
+    }
+}
+
+@media screen and (min-width: 538px) and (max-width: 628px) {
+
+    .hamburguer {
+        display: block;
+        z-index: 1;
+    }
+
+    #usu{
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(212, 212, 212);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    #redes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #usu a, #redes a{
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    #usu li:nth-child(1) a, #redes li:nth-child(1) a {
+        transition: .5s .2s;
+    }
+
+    #redes li:nth-child(2) a {
+        transition: .5s .4s;
+    }
+
+    #redes li:nth-child(3) a {
+        transition: .5s .6s;
+    }
+
+    #redes li:nth-child(4) a {
+        transition: .5s .8s;
+    }
+
+    #redes li:nth-child(5) a {
+        transition: .5s 1s;
+    }
+
+    #usu li:nth-child(6) a, #redes li:nth-child(6) a {
+        transition: .5s 1.2s;
+    }
+
+    #topo.active #usu, #topo.active #redes  {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    #topo.active #usu a, #topo.active #redes a {
+        opacity: 1;
+    }
+
+    #topo.active .hamburguer {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    #topo.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #topo.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #pe {
+        display: none;
+    }
+
+    #pe a {
+        width: 100vw;
+    }
+
+    #logado div {
+        margin-left: 0px;
+    }
+
+    #logado{
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    #logout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logout-button {
+        margin-bottom: 30px;
+    }
+
+    #logado div {
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    #logado div:nth-child(1){
+        transition: .5s .2s;
+    }
+
+    #logado div:nth-child(2){
+        transition: .5s .4s;
+    }
+
+    #topo.active #logado  {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    #topo.active #logado div {
+        opacity: 1;
+    }
+
+    header {
+        position: sticky;
+        top: -1px;
+    }
+
+    header h1 {
+        justify-content: space-between;
+        font-size: 1.3em;
+    }
+
+    #idpes {
+        display: none;
+    }
+
+    footer {
+        font-size: .9em;
+    }
+}
+
+@media screen and (min-width: 628px) and (max-width: 1349px) {
+        
+    .hamburguer {
+        display: block;
+        z-index: 1;
+    }
+
+    #usu{
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(212, 212, 212);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    #redes {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #usu a, #redes a{
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    #usu li:nth-child(1) a, #redes li:nth-child(1) a {
+        transition: .5s .2s;
+    }
+
+    #redes li:nth-child(2) a {
+        transition: .5s .4s;
+    }
+
+    #redes li:nth-child(3) a {
+        transition: .5s .6s;
+    }
+
+    #redes li:nth-child(4) a {
+        transition: .5s .8s;
+    }
+
+    #redes li:nth-child(5) a {
+        transition: .5s 1s;
+    }
+
+    #usu li:nth-child(6) a, #redes li:nth-child(6) a {
+        transition: .5s 1.2s;
+    }
+
+    #topo.active #usu, #topo.active #redes  {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    #topo.active #usu a, #topo.active #redes a {
+        opacity: 1;
+    }
+
+    #topo.active .hamburguer {
+        position: fixed;
+        top: 26px;
+        right: 16px;
+        border-top-color: transparent;
+    }
+
+    #topo.active .hamburguer::before {
+        transform: rotate(135deg);
+    }
+
+    #topo.active .hamburguer::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #pe {
+        display: none;
+    }
+
+    #pe a {
+        width: 100vw;
+    }
+
+    #logado div {
+        margin-left: 0px;
+    }
+
+    #logado{
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+    }
+
+    #logout {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #logout-button {
+        margin-bottom: 30px;
+    }
+
+    #logado div {
+        font-size: 24px;
+        opacity: 0;
+    }
+
+    #logado div:nth-child(1){
+        transition: .5s .2s;
+    }
+
+    #logado div:nth-child(2){
+        transition: .5s .4s;
+    }
+
+    #topo.active #logado  {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
+    }
+
+    #topo.active #logado div {
+        opacity: 1;
+    }
+
+    header {
+        position: sticky;
+        top: -1px;
+    }
+
+    #title {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1349px) {
+
+    .logos {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+    }
+
+    #burguer {
+        display: none;
+    }
+
+    #pe > ul > li > a:hover {
+        background-color: rgb(94, 93, 93);
+        transition-duration: .5s;
+    }
+}

@@ -1,0 +1,388 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-image: url('../imagens/imagenssite/fundo.jpeg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-color: rgb(0, 0, 0);
+}
+
+#topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(212, 212, 212);
+    margin: -10px;
+}
+
+#topo ul {
+    display: flex;
+    list-style-type: none;
+}
+
+#topo li {
+    display: inline-flex;
+    margin-left: 10px;
+}
+
+#topo a {
+    text-decoration: none;
+    font-weight: bold;
+    padding: 3px;
+}
+
+#usu {
+    background-color: rgb(212, 212, 212);
+    display: flex;
+    align-items: center;
+    font-size: .9em;
+    transition: .5s;
+    height: 100px;
+}
+
+.logos {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+#topo #usu li:hover {
+    box-sizing: border-box;
+    text-decoration: underline;
+    border-radius: 5px;
+    transition-duration: 1s;
+}
+
+#logoutbtn:hover {
+    text-decoration: underline;
+}
+
+#logout span {
+    vertical-align: middle;
+}
+
+.hr1, .hr2 {
+    display: block;
+}
+
+#logado {
+    display: flex;
+    align-items: center;
+}
+
+#logado div {
+    margin-left: 15px;
+}
+
+.material-symbols-outlined {
+    color: black;
+}
+
+.topolog {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.topocad {
+    color: black;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+header {
+    background-color: rgb(212, 212, 212);
+    padding: 10px;
+    transition: .5s;
+    position: sticky;
+    top: -1px;
+    z-index: 10;
+
+}
+
+header #title {
+    display: flex;
+    align-items: center;
+}
+
+header #img1 {
+    width: 100px;
+    transition: .5s;
+}
+
+header #img2 {
+    width: 100px;
+    height: 60px;
+    margin-right: 50px;
+    transition: .5s;
+}
+
+header.rolagem {
+    background-color: #6d453400;
+    box-shadow: none;
+    transition: .5s;
+}
+
+header.rolagem #img1 {
+    width: 80px;
+    transition: .5s;
+}
+
+header.rolagem #img2 {
+    width: 80px;
+    height: 55px;
+    transition: .5s;
+}
+
+header.rolagem div, header.rolagem div a, header.rolagem #pe a{
+    background-color: #6d453400;
+    transition: .5s;
+    text-shadow: none;
+}
+
+header.rolagem #pe, header.rolagem #burguer{
+    display: none;
+}
+
+header.rolagem .logos {
+    height: 15px;
+    width: 15px;
+    transition: .5s;
+}
+
+header.rolagem #usu {
+    font-size: 15px;
+    transition: .5s;
+}
+
+header.rolagem #logout {
+    font-size: 15px;
+}
+
+header.rolagem #openMenu, header.rolagem #closeMenu{
+    display: block;
+    transition: .5s;
+}
+
+header h1 {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    margin-top: 11px;
+}
+
+#idpes {
+    display: flex;
+    width: 40vw;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+#burguer {
+    background-color: #073260;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 5px;
+    cursor: pointer; /* Para mudar o cursor */
+}
+
+#burguer:active {
+    background-color: rgb(138, 137, 137);
+}
+
+#pe {
+    background-color: #073260;
+    width: 98.79vw;
+}
+
+#pe ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+#pe li {
+    display: inline-block;
+}
+
+.dropname {
+    background-color: #073260;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 12px 70px;
+    border-radius: 3px;
+}
+
+#pe li a:hover {
+    background-color: #073260;
+    transition: .5s;
+}
+
+.dropdown-menu {
+    position: absolute;
+    border-radius: 0px 0px 5px 5px;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.459);
+    background-color: black;
+    display: none;
+    width: auto;
+    z-index: 10;
+    padding: 15px;
+}
+
+.dropdown-menu a {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+.dropdown:hover .dropdown-menu{
+    display: block;
+}
+
+.hamburguer {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
+    position: relative;
+    transition: .3s;
+}
+
+.toggle-button {
+    position: relative;
+    width: 60px;
+    height: 34px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .toggle-button input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider1 {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../imagens/pexels-francesco-ungaro-998641.jpg');
+    background-position: center center;
+    background-size: contain;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider1:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background: url('../imagens/pexels-felixmittermeier-956981.jpg');
+    background-position: center center;
+    background-size: contain;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  input:checked + .slider1 {
+    background: url('../imagens/pexels-felixmittermeier-956981.jpg');
+    background-position: center center;
+    background-size: contain;
+  }
+
+  input:checked + .slider1:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background: url('../imagens/pexels-francesco-ungaro-998641.jpg');
+    background-position: center center;
+    background-size: contain;
+  }
+
+  /* Estilo adicional para o slider */
+  .slider1.round {
+    border-radius: 34px;
+  }
+
+  .slider1.round:before {
+    border-radius: 50%;
+  }
+
+  .icons {
+    text-decoration: none;
+    color: black;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #080808; 
+    margin-bottom: 10px; 
+  }
+
+    .conteudo {
+
+    font-weight: bold;
+    color: #080808; 
+    line-height: 1.5; 
+    text-align: justify;
+    padding: 20px;
+    text-indent: 20px;
+  }
+
+    .texto {
+        background-color: #ffffffb7;
+        border-radius: 15px;
+        max-width: 800px;
+        margin: auto;
+        margin-bottom: 30px;
+
+  }
+
+  footer {
+    background-color: rgb(27, 27, 27);
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

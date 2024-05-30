@@ -2,7 +2,7 @@
 
 session_start(); // Inicia a sessão PHP
 session_destroy(); // Destrói a sessão
-header("Location: index.php"); // Redireciona para a tela principal
+header("Location: login.php"); // Redireciona para a tela principal
 exit();
 
 ?>

@@ -66,7 +66,7 @@
             </div>
             <p id="erro" style="color: red; font-size:.8em; text-align:center;"><?php echo $erro; ?></p>
             <div class="esenha">
-                <a href="./opcoes.html">Esqueci a senha</a>
+                <a href="./opcoes.php">Esqueci a senha</a>
             </div>
             <div id="botoes">
                 <input type="submit" value="Enviar" class="btn-login">

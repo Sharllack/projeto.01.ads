@@ -115,7 +115,7 @@ $result = $mysqli->query($sql_query);
             </li>
 
             <li class="dropdown">
-                <a href="#" class = "dropname">Nossa história</a>
+                <a href="./historia.php" class = "dropname">Nossa história</a>
 
             </li>
         </ul>

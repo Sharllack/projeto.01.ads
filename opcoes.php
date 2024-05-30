@@ -27,8 +27,8 @@
         <form action="#" method="post" id="container">
             <h2 class="title">Como deseja recuperar?</h2>
             <div id="opcoes">
-                <a href="./esenha.html" class="opcao">E-mail</a><br>
-                <a href="ssenha.html" class="opcao">SMS</a><br>
+                <a href="./esenha.php" class="opcao">E-mail</a><br>
+                <a href="./ssenha.php" class="opcao">SMS</a><br>
             </div>
             <a href="index.php" id="btn-cancel">Cancelar</a>
         </form>
