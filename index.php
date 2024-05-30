@@ -163,7 +163,32 @@ $result = $mysqli->query($sql_query);
             </div>
             
         </main>
-        <footer>Site criado por <strong>Larissa Menezes</strong> e <strong>Lucas Menezes</strong> para o Projeto de ADS.</footer>
+        <footer id="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Sobre nós</h3>
+                    <p>Somos uma loja online especializada em equipamentos esportivos de alta qualidade para futebol americano.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>Email: contato@lojafutebolamericano.com</p>
+                    <p>Telefone: +55 21 1234-5678</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Larissa Menezes & Lucas Menezes. Todos os direitos reservados.</p>
+            </div>
+        </footer>
+
+
     <script src="./JS.index/funcoes.js"></script>
     <script src="./JS.index/script.js"></script>
     <script src="./JS.index/compra.js"></script>
