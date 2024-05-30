@@ -396,13 +396,6 @@ main {
     background-color: white;
 }
 
-.carrossel {
-    box-shadow: 2px 2px 4px black;
-    overflow: hidden;
-    height: 200px;
-    width: 200px;
-}
-
 .toggle-button {
     position: relative;
     width: 60px;
