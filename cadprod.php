@@ -10,12 +10,9 @@
     
         if(unlink($arquivo['imgPrin']) && unlink($arquivo['mini1']) && unlink($arquivo['mini2'])) {
             $deu_certo = $mysqli->query("DELETE FROM prod WHERE protocolo = '$protocolo'") or die($mysqli->error);
-            if($deu_certo)
-                echo "<p>Arquivo deletado com sucesso!!</p>";
         }
         
     }
-
 
         if(isset($_FILES['imgPrin']) && isset($_FILES['min1']) && isset($_FILES['min2']) && isset($_POST['nomeDoProduto']) && isset($_POST['preco']) && isset($_POST['descricao'])) {
             $protocolo = $_POST['protocolo'];
@@ -53,10 +50,7 @@
     
             if($deu_certo1 && $deu_certo2 && $deu_certo3) {
                 $mysqli->query("INSERT INTO prod (protocolo ,nome, preco, descricao, imgPrin, mini1, mini2) VALUES('$protocolo' ,'$nomeDoProduto', '$preco', '$descricao', '$path1', '$path2', '$path3')") or die($mysqli->error);
-                    echo "<p>sucesso!</p>";
-                } else {
-                    echo "<p>fracasso!</p>";
-                };
+                }
         }
 
 $sql_query = "SELECT * FROM prod" or die($mysqli->error);
@@ -71,22 +65,6 @@ $result = $mysqli->query($sql_query);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./estilo.cadprod/style.css">
-    <style>
-        table {
-            margin-top: 15px;
-            border-collapse: collapse;
-            width: 100%;
-            }
-
-        tr, th, td {
-            border: 2px solid white;
-            text-align: center;
-            }
-
-        img {
-            width: 50px;
-            }
-    </style>
 </head>
 <body>
     <header>
@@ -106,7 +84,7 @@ $result = $mysqli->query($sql_query);
     <div class="container">
         <form  enctype="multipart/form-data" method="post">
             <label for="idProtocolo">Protocolo do Produto</label>
-            <input type="text" name="protocolo" placeholder="Número do Protocolo (Pode ficar vazio)" id="idnome">
+            <input type="text" name="protocolo" placeholder="Número do Protocolo" id="idnome">
             <label for="idnome">Nome do Produto</label>
             <input type="text" name="nomeDoProduto" placeholder="Nome do Produto" id="idnome" required>
             <label for="idPreco">Preço</label>
@@ -146,7 +124,7 @@ $result = $mysqli->query($sql_query);
                     <td><?php echo $row['protocolo'];?></td>
                     <td><?php echo $row['nome'];?></td>
                     <td><?php echo $row['preco'];?></td>
-                    <td><?php echo $row['descricao']?></td>
+                    <td id="desc"><?php echo $row['descricao']?></td>
                     <td><img height="50px" src="<?php echo $row['imgPrin'];?>" alt=""></img></td>
                     <td><img height="50px" src="<?php echo $row['mini1'];?>" alt=""></img></td>
                     <td><img height="50px" src="<?php echo $row['mini2'];?>" alt=""></img></td>

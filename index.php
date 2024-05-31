@@ -161,6 +161,29 @@ $result = $mysqli->query($sql_query);
                     <label for="radio3" class="manual-btn"></label>
                 </div>
             </div>
+
+            <div class="cadProd">
+                <div class="prod">
+                    <?php 
+                    while($row = $result->fetch_assoc()) {
+                    ?>
+                        <div class="prodContent">
+                            <a href="#" class="Img"><img src="<?php echo $row['imgPrin'];?>"></a>
+                            <h2 class="prec"><?php echo 'R$' . number_format($row['preco'], 2 , ',', '.');?></h2>
+                            <hr class="hr1">
+                            <p class="nome"><a href="#"><?php echo $row['nome'];?></a></p>
+                            <hr class="hr2">
+                            <a href="#" class="icons" >
+                                <span class="material-symbols-outlined">
+                                add_shopping_cart info
+                                </span>
+                            </a>
+                        </div>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
             
         </main>
         <footer id="footer">

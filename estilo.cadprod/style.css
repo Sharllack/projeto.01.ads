@@ -207,3 +207,25 @@ input[type="file"] {
     border-radius: 25px;
     cursor: pointer;
 }
+
+table {
+    margin-top: 15px;
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+tr, th, td {
+    border: 2px solid white;
+    text-align: center;
+    padding: 5px;
+    }
+
+#desc {
+    text-indent: 30px;
+    text-align: justify;
+    padding: 10px;
+}
+
+img {
+    width: 50px;
+    }

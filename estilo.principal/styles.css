@@ -287,7 +287,6 @@ main {
     margin: auto;
     box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.322);
     padding: 15px;
-    text-indent: 30px;
     text-align: justify;
     border-radius: 10px;
     margin-bottom: 15px;
@@ -512,4 +511,69 @@ main {
 .footer-bottom p {
     font-size: 12px;
     margin: 0;
+}
+
+.prod {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid rgba(0, 0, 0, 0.144);
+    list-style: none;
+    background: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.prodContent {
+    background: white;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.205);
+    height: 400px;
+    width: 200px;
+}
+
+
+
+.Img img {
+    width: 200px;
+}
+
+.prec {
+    float: right;
+    margin-right: 20px;
+    background-color: rgba(128, 128, 128, 0.329);
+    padding: 3px;
+    border-radius: 0 20px;
+    position: relative;
+    z-index: 9;
+}
+
+.hr1 {
+    margin: 40px 20px 10px 20px;
+}
+
+.hr2 {
+    margin: 20px 20px 0px 20px;
+}
+
+.nome {
+    margin-top: 40px;
+    text-align: center;
+    width: 150px;
+    margin: auto;
+}
+
+.nome a{
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
+.icons span {
+    display: flex;
+    align-items: center;
+    margin: 2px 0px 0px 2px;
+    padding: 10px 0px 20px 0px;
+}
+
+.prod:not(:last-child) {
+    margin-right: 5px;
 }
