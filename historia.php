@@ -126,7 +126,30 @@ if(!isset($_SESSION)) {
     <p class="conteudo">Em 2024, a Sport America Brazil deu um passo adiante. Expandimos nossas lojas físicas, oferecendo experiências incríveis para os aficionados por futebol americano. Agora, nossa marca é sinônimo de paixão, qualidade e exclusividade. De fã para fã, convidamos você a visitar uma de nossas lojas e mergulhar na história vibrante da Sport America Brazil. Junte-se à nossa comunidade e explore o universo dos esportes americanos conosco! 🏈
     </p>
 </section>
-<footer>Site criado por <strong>Larissa Menezes</strong> e <strong>Lucas Menezes</strong> para o Projeto de ADS.</footer>
+<footer id="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>Sobre nós</h3>
+                    <p>Somos uma loja online especializada em equipamentos esportivos de alta qualidade para futebol americano.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>Email: contato@lojafutebolamericano.com</p>
+                    <p>Telefone: +55 21 99042-0932/ +55 21 97014-6840</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Redes Sociais</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Larissa Menezes & Lucas Menezes. Todos os direitos reservados.</p>
+            </div>
+        </footer>
     <script src="./JS.index/funcoes.js"></script>
     <script src="./JS.historia/darkmode.js"></script>
     <script src="./JS.historia/menu.burguer.js"></script>

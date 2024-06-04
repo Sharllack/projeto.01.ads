@@ -182,8 +182,20 @@
         display: none;
     }
 
-    footer {
-        font-size: .5em;
+    .footer-section p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .footer-section ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 9px;
+    }
+
+    .footer-bottom p {
+        font-size: 9px;
+        margin: 0;
     }
 }
 
@@ -363,8 +375,25 @@
         display: none;
     }
 
-    footer {
-        font-size: .6em;
+    .footer-section h3 {
+        font-size: 11px;
+        margin-bottom: 10px;
+    }
+    
+    .footer-section p {
+        font-size: 9px;
+        line-height: 1.5;
+    }
+
+    .footer-section ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 9px;
+    }
+
+    .footer-bottom p {
+        font-size: 9px;
+        margin: 0;
     }
 }
 
