@@ -94,55 +94,92 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container">
         <h2 name="h2">Cadastro</h2>
         <form id="form" action="" method="post">
-            <label for="idnome">Nome</label>
-            <input type="text" name="nome" placeholder="Nome completo" id="idnome" minlength="15" maxlength="80" required>
-            <label for="idata">Data de Nascimento</label>
-            <input type="date" id="idata" name="data_nascimento" placeholder="Data de nascimento" required>
-            <label for="idsexo">Sexo</label>
-            <select name="sexo" id="idsexo" required>
-                <option value="M">Masculino</option>
-                <option value="F">Feminino</option>
-            </select>
-            <label for="idmae">Nome Materno</label>
-            <input type="text" name="nome_materno" placeholder="Nome Completo" id="idmae" required>
-            <label for="cpf">CPF</label>
-            <input type="text" id="cpf" name="cpf" placeholder="Ex.: 123.456.789-09" onblur="verificarCPF()" max="14" onkeyup="formatacpf(this)" maxlength="14" required>
-            <span><?php echo $cpf_error; ?></span><br>
-            <p id="rescpf"></p>
-            <label for="idemail" id="labemail">E-mail</label>
-            <input type="email" name="email" placeholder="E-mail" id="idemail" required>
-            <span><?php echo $email_error; ?></span><br>
-            <label for="idtel">Telefone Celular</label>
-            <input type="tel" class="tel" name="telefone_celular" placeholder="Ex.: +XX (XX) XXXXX-XXXX" id="idtel" onkeyup="formataCell(this)" maxlength="13" required>
-            <span><?php echo $cell_error; ?></span><br>
-            <label for="idtelf">Telefone Fixo</label>
-            <input type="tel" class="tel" name="telefone_fixo" placeholder="Ex.: +XX (XX) XXXX-XXXX" id="idtelf" onkeyup="formataTel(this)" maxlength="12" required>
-            <label for="idcep">CEP</label>
-            <input type="text" class="end" id="idcep" name="cep" placeholder="Ex.: XXXXX-XXX" onkeyup="formataCep(this)" required>
-            <p id=rescep></p>
-            <label for="idrua" id="labrua">Rua</label>
-            <input type="text" class="end" name="rua" id="idrua" placeholder="Rua" required>
-            <label for="idnum">Número</label>
-            <input type="text" class="end" name="num" id="idnum" placeholder="Nº" required>
-            <label for="idcomp">Complemento</label>
-            <input type="text" class="end" name="comp" id="idcomp" placeholder="Complemento" required>
-            <label for="idbai">Bairro</label>
-            <input type="text" class="end" name="bairro" id="idbai" placeholder="Bairro" required>
-            <label for="idcdd">Cidade</label>
-            <input type="text" class="end" name="cdd" id="idcdd" placeholder="Cidade" required>
-            <label for="idest">Estado</label>
-            <input type="text" class="end" name="estado" id="idest" placeholder="Estado" required>
-            <label for="idlogin">Login</label>
-            <input type="text" name="login" placeholder="Login com 6 caracteres" id="idlogin" maxlength="6" minlength="6" required>
-            <span><?php echo $usuario_error; ?></span><br>
-            <label for="idsen">Senha</label>
-            <input type="password" name="senha" placeholder="Senha com 8 caracteres" id="idsen" maxlength="8" minlength="8" required>
-            <label for="idcsen">Confirme a senha</label>
-            <input type="password" name="confirmacao_senha" placeholder="Confirmação da Senha" id="idcsen" maxlength="8" minlength="8" required>
-            <p id="resSenha"></p>
-            <button type="submit" name="acao">Enviar</button>
-            <button type="reset">Limpar Tela</button>
-            <input type="hidden" name="form" value="f_form">
+            <div class="nome">
+                <label for="idnome">Nome</label>
+                <input type="text" name="nome" placeholder="Nome completo" id="idnome" minlength="15" maxlength="80" required>
+            </div>
+            <div class="data">
+                <label for="idata">Data de Nascimento</label>
+                <input type="date" id="idata" name="data_nascimento" placeholder="Data de nascimento" required>
+            </div>
+            <div class="sexo">
+                <label for="idsexo">Sexo</label>
+                <select name="sexo" id="idsexo" required>
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+            </div>
+            <div class="nomeDaMae">
+                <label for="idmae">Nome Materno</label>
+                <input type="text" name="nome_materno" placeholder="Nome Completo" id="idmae" required>
+            </div>
+            <div class="cpf">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Ex.: 123.456.789-09" onblur="verificarCPF()" max="14" onkeyup="formatacpf(this)" maxlength="14" required>
+                <span><?php echo $cpf_error; ?></span><br>
+                <p id="rescpf"></p>
+            </div>
+            <div class="email">
+                <label for="idemail" id="labemail">E-mail</label>
+                <input type="email" name="email" placeholder="E-mail" id="idemail" required>
+                <span><?php echo $email_error; ?></span><br>
+            </div>
+            <div class="celular">
+                <label for="idtel">Telefone Celular</label>
+                <input type="tel" class="tel" name="telefone_celular" placeholder="Ex.: +XX (XX) XXXXX-XXXX" id="idtel" onkeyup="formataCell(this)" maxlength="13" required>
+                <span><?php echo $cell_error; ?></span><br>
+            </div>
+            <div class="telFixo">
+                <label for="idtelf">Telefone Fixo</label>
+                <input type="tel" class="tel" name="telefone_fixo" placeholder="Ex.: +XX (XX) XXXX-XXXX" id="idtelf" onkeyup="formataTel(this)" maxlength="12" required>
+            </div>
+            <div class="cep">
+                <label for="idcep">CEP</label>
+                <input type="text" class="end" id="idcep" name="cep" placeholder="Ex.: XXXXX-XXX" onkeyup="formataCep(this)" required>
+                <p id=rescep></p>
+            </div>
+            <div class="rua">
+                <label for="idrua" id="labrua">Rua</label>
+                <input type="text" class="end" name="rua" id="idrua" placeholder="Rua" required>
+            </div>
+            <div class="numero">
+                <label for="idnum">Número</label>
+                <input type="text" class="end" name="num" id="idnum" placeholder="Nº" required>
+            </div>
+            <div class="complemento">
+                <label for="idcomp">Complemento</label>
+                <input type="text" class="end" name="comp" id="idcomp" placeholder="Complemento" required>
+            </div>
+            <div class="bairro">
+                <label for="idbai">Bairro</label>
+                <input type="text" class="end" name="bairro" id="idbai" placeholder="Bairro" required>
+            </div>
+            <div class="cidade">
+                <label for="idcdd">Cidade</label>
+                <input type="text" class="end" name="cdd" id="idcdd" placeholder="Cidade" required>
+            </div>
+            <div class="estado">
+                <label for="idest">Estado</label>
+                <input type="text" class="end" name="estado" id="idest" placeholder="Estado" required>
+            </div>
+            <div class="login">
+                <label for="idlogin">Login</label>
+                <input type="text" name="login" placeholder="Login com 6 caracteres" id="idlogin" maxlength="6" minlength="6" required>
+                <span><?php echo $usuario_error; ?></span><br>
+            </div>
+            <div class="senha">
+                <label for="idsen">Senha</label>
+                <input type="password" name="senha" placeholder="Senha com 8 caracteres" id="idsen" maxlength="8" minlength="8" required>
+            </div>
+            <div class="confirmacaoDeSenha">
+                <label for="idcsen">Confirme a senha</label>
+                <input type="password" name="confirmacao_senha" placeholder="Confirmação da Senha" id="idcsen" maxlength="8" minlength="8" required>
+                <p id="resSenha"></p>
+            </div>
+            <div class="btn">
+                <button type="submit" name="acao">Enviar</button>
+                <button type="reset">Limpar Tela</button>
+            </div>
         </form>
     </div>
     <footer>Site criado por <strong>Larissa Menezes</strong> e <strong>Lucas Menezes</strong> para o Projeto de ADS.</footer>
