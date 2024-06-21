@@ -15,6 +15,15 @@ body {
     background-size: cover;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+}
+
 header {
     background-color: rgb(212, 212, 212);
     padding: 10px;
@@ -157,7 +166,7 @@ header h1 {
 }
 
 #form div {
-    width: 33%;
+    width: 30%;
     margin: auto;
 }
 

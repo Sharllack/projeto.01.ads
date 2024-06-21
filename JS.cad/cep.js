@@ -15,6 +15,10 @@ function buscaCEP() {
                 document.getElementById('idest').value = endereco.state;
                 document.getElementById('idbai').value = endereco.neighborhood;
                 document.getElementById('labcep').innerHTML = "CEP";
+                let num = document.getElementById('idnum');
+                num.removeAttribute("readonly", false);
+                let comp = document.getElementById('idcomp');
+                comp.removeAttribute("readonly", false);
                 document.getElementById('labcep').style.color = "rgb(0, 255, 42)";
                 document.getElementById('idcep').style.border = "1.5px solid rgb(0, 255, 42)";
                 // Retornar true para indicar que o CEP é válido

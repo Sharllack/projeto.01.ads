@@ -39,7 +39,7 @@ document.querySelector('#idsen').addEventListener('keyup', function() {
     const labSen = document.querySelector('#labSen');
 
     if(senha.length !== 8) {
-        labSen.innerHTML = "A senha precisa ter exatamente 8 caracteres."
+        labSen.innerHTML = "A senha precisa ter exatamente 8 caracteres alfabéticos."
         labSen.style.color = "red"
         labSen.style.fontSize = ".8em"
         return false;
@@ -56,7 +56,7 @@ document.querySelector('#idlogin').addEventListener('keyup', function() {
     const resLog = document.querySelector('#resLog');
 
     if(login.length !== 6) {
-        resLog.innerHTML = "O login precisa ter exatamente 6 caracteres."
+        resLog.innerHTML = "O login precisa ter exatamente 6 caracteres alfabéticos."
         resLog.style.color = "red"
         resLog.style.fontSize = ".8em"
         return false;
@@ -67,6 +67,25 @@ document.querySelector('#idlogin').addEventListener('keyup', function() {
         return true;
     }
 })
+
+function apenasAlfabeticos(event) {
+    var input = event.target;
+    var valor = input.value;
+    
+    // Expressão regular para verificar se há apenas caracteres alfabéticos
+    var regex = /^[a-zA-Z]+$/;
+    
+    // Se o valor não corresponder à expressão regular, limpe o campo
+    if (!regex.test(valor)) {
+        input.value = valor.replace(/[^a-zA-Z]/g, '');
+    }
+}
+
+
+// Adicione event listeners para os campos de login, senha e confirmação de senha
+document.getElementById('idlogin').addEventListener('input', apenasAlfabeticos);
+document.getElementById('idsen').addEventListener('input', apenasAlfabeticos);
+document.getElementById('idcsen').addEventListener('input', apenasAlfabeticos);
 
 
 
