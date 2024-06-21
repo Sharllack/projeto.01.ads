@@ -106,7 +106,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="idmae">Nome Materno</label>
             <input type="text" name="nome_materno" placeholder="Nome Completo" id="idmae" required>
             <label for="cpf">CPF</label>
-            <input type="text" id="cpf" name="cpf" placeholder="Ex.: 123.456.789-09" onblur="verificarCPF()" onkeyup="formatacpf(this)" maxlength="14" required>
+            <input type="text" id="cpf" name="cpf" placeholder="Ex.: 123.456.789-09" onblur="verificarCPF()" max="14" onkeyup="formatacpf(this)" maxlength="14" required>
             <span><?php echo $cpf_error; ?></span><br>
             <p id="rescpf"></p>
             <label for="idemail" id="labemail">E-mail</label>
@@ -150,9 +150,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="./JS.cad/darkmode.js"></script>
     <script src="./JS.cad/cep.js"></script>
     <script src="./JS.cad/cpf.js"></script>
-    <script src="./JS.cad/tels.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./JS.cad/cSenha.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="./JS.cad/formatacao.js"></script>
     
 </body>
 </html>
