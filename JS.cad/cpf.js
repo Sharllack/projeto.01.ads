@@ -28,32 +28,22 @@ function validarCPF(cpf) {
 }
 
 // Exemplo de uso:
-const cpfExemplo = '12345678909'; // CPF fictício
-if (validaCPF(cpfExemplo)) {
-    console.log('CPF válido.');
-} else {
-    console.log('CPF inválido.');
-}
-
-// Exemplo de uso:
 
         function verificarCPF() {
             const cpfInput = document.getElementById('cpf');
             const cpf1 = cpfInput.value;
 
             if (validarCPF(cpf1)) {
-                document.getElementById('rescpf').innerHTML = "Tudo certo!";
-                document.getElementById('rescpf').style.color = "rgb(0, 255, 42)";
+                document.getElementById('labcpf').innerHTML = "CPF";
+                document.getElementById('labcpf').style.color = "rgb(0, 255, 42)";
                 document.getElementById('cpf').style.border = "1.5px solid rgb(0, 255, 42)";
-                document.getElementById('rescpf').style.marginBottom = "5px";
-                document.getElementById('rescpf').style.display = "block";
+                document.getElementById('labcpf').style.display = "block";
                 return true;
             } else {
-                document.getElementById('rescpf').innerHTML = "CPF inválido!";
-                document.getElementById('rescpf').style.color = "red";
+                document.getElementById('labcpf').innerHTML = "CPF inválido!";
+                document.getElementById('labcpf').style.color = "red";
                 document.getElementById('cpf').style.border = "1.5px solid red";
-                document.getElementById('rescpf').style.marginBottom = "5px";
-                document.getElementById('rescpf').style.display = "block";
+                document.getElementById('labcpf').style.display = "block";
                 return false;
             }
         }

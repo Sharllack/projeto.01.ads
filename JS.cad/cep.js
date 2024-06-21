@@ -14,10 +14,11 @@ function buscaCEP() {
                 document.getElementById("idcdd").value = endereco.city;
                 document.getElementById('idest').value = endereco.state;
                 document.getElementById('idbai').value = endereco.neighborhood;
-                document.getElementById('rescep').innerHTML = "Tudo certo!";
-                document.getElementById('rescep').style.color = "rgb(0, 255, 42)";
-                document.getElementById('rescep').style.fontWeight = "bold";
-                document.getElementById('idcep').style.border = "1.5px solid rgb(0, 255, 42)"
+                document.getElementById('labcep').innerHTML = "CEP";
+                document.getElementById('labcep').style.color = "rgb(0, 255, 42)";
+                document.getElementById('idcep').style.border = "1.5px solid rgb(0, 255, 42)";
+                // Retornar true para indicar que o CEP é válido
+                return true;
             } else if (req.status === 404) {
                 document.getElementById("idrua").value = "";
                 document.getElementById("idcdd").value = "";
@@ -25,15 +26,24 @@ function buscaCEP() {
                 document.getElementById('idbai').value = "";
                 document.getElementById('idnum').value = "";
                 document.getElementById('idcomp').value = "";
-                document.getElementById('rescep').innerHTML = "CEP inválido!";
-                document.getElementById('rescep').style.color = "red";
-                document.getElementById('rescep').style.fontWeight = "bold";
+                let num = document.getElementById('idnum');
+                num.setAttribute("readonly", true);
+                let comp = document.getElementById('idcomp');
+                comp.setAttribute("readonly", true);
+                document.getElementById('labcep').innerHTML = "CEP inválido!";
+                document.getElementById('labcep').style.color = "red";
                 document.getElementById('idcep').style.border = "1.5px solid red";
+                // Retornar false para indicar que o CEP é inválido
                 return false;
             } else {
-                alert('Erro ao fazer a requisição.')
+                alert('Erro ao fazer a requisição.');
+                // Em caso de erro na requisição, retornar false
+                return false;
             }
         }
+    } else {
+        // Retornar false se o campo CEP estiver vazio
+        return false;
     }
 }
 

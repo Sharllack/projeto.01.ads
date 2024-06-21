@@ -231,22 +231,41 @@ input[type="email"],
     transition: .5s;
 }
 
-#cpf {
-    margin-bottom: 0px;
+#cpf, #idemail, #idtel, #idlogin {
+    margin-bottom: 5px;
+}
+
+.msgError {
+    color: red;
+    font-weight: bold;
+    font-size: .9em;
+    margin-left: 15px;
 }
 
 #labemail {
     display: block;
+}
+
+#labTelF {
     margin-top: 15px;
+    display: block;
+}
+
+#labSen {
+    margin-top: 10px;
+    display: block;
 }
 
 #idcep {
     margin-bottom: 0px;
 }
 
+#idmae {
+    margin-bottom: 5px;
+}
+
 #labrua {
     display: block;
-    margin-top: 15px;
 }
 
 #idcsen {
@@ -258,10 +277,6 @@ input[type="email"],
     box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.425);
     outline: none;
     transition: .5s;
-}
-
-#resSenha {
-    color: red;
 }
 
 input[type="text"]:focus,
@@ -286,12 +301,6 @@ select {
 }
 
 #rescep {
-    font-size: .8em;
-    font-weight: bold;
-    margin: 3px 0px 0px 10px;
-}
-
-#resSenha {
     font-size: .8em;
     font-weight: bold;
     margin: 3px 0px 0px 10px;

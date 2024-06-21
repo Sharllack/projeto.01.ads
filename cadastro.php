@@ -95,86 +95,83 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2 name="h2">Cadastro</h2>
         <form id="form" action="" method="post">
             <div class="nome">
-                <label for="idnome">Nome</label>
-                <input type="text" name="nome" placeholder="Nome completo" id="idnome" minlength="15" maxlength="80" required>
+                <label for="idnome" class="resNome" >Nome</label>
+                <input type="text" name="nome" placeholder="Nome completo" id="idnome" onkeydown="verNome()" onkeypress="verNome()" onkeyup="verNome()" maxlength="80" required value="<?php echo isset($_POST['nome']) ? $_POST['nome'] : ''; ?>">
             </div>
             <div class="data">
                 <label for="idata">Data de Nascimento</label>
-                <input type="date" id="idata" name="data_nascimento" placeholder="Data de nascimento" required>
+                <input type="date" id="idata" name="data_nascimento" placeholder="Data de nascimento" required value="<?php echo isset($_POST['data_nascimento']) ? $_POST['data_nascimento'] : ''; ?>">
             </div>
             <div class="sexo">
                 <label for="idsexo">Sexo</label>
-                <select name="sexo" id="idsexo" required>
+                <select name="sexo" id="idsexo" required value="<?php echo isset($_POST['sexo']) ? $_POST['sexo'] : ''; ?>">
                     <option value="M">Masculino</option>
                     <option value="F">Feminino</option>
                 </select>
             </div>
             <div class="nomeDaMae">
-                <label for="idmae">Nome Materno</label>
-                <input type="text" name="nome_materno" placeholder="Nome Completo" id="idmae" required>
+                <label for="idmae" class="resNomeMae">Nome Materno</label>
+                <input type="text" name="nome_materno" placeholder="Nome Completo" id="idmae" onkeydown="verNomeMae()" onkeypress="verNomeMae()" onkeyup="verNomeMae()" maxlength="80" required value="<?php echo isset($_POST['nome_materno']) ? $_POST['nome_materno'] : ''; ?>">
             </div>
             <div class="cpf">
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" name="cpf" placeholder="Ex.: 123.456.789-09" onblur="verificarCPF()" max="14" onkeyup="formatacpf(this)" maxlength="14" required>
-                <span><?php echo $cpf_error; ?></span><br>
-                <p id="rescpf"></p>
+                <label for="cpf" id="labcpf">CPF</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Ex.: 123.456.789-09" onkeyup="verificarCPF()" max="14" maxlength="14" required value="<?php echo isset($_POST['cpf']) ? $_POST['cpf'] : ''; ?>">
+                <span class="msgError"><?php echo $cpf_error; ?></span>
             </div>
             <div class="email">
                 <label for="idemail" id="labemail">E-mail</label>
-                <input type="email" name="email" placeholder="E-mail" id="idemail" required>
-                <span><?php echo $email_error; ?></span><br>
+                <input type="email" name="email" placeholder="E-mail" id="idemail" required value="<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>">
+                <span class="msgError"><?php echo $email_error; ?></span>
             </div>
             <div class="celular">
                 <label for="idtel">Telefone Celular</label>
-                <input type="tel" class="tel" name="telefone_celular" placeholder="Ex.: +XX (XX) XXXXX-XXXX" id="idtel" onkeyup="formataCell(this)" maxlength="13" required>
-                <span><?php echo $cell_error; ?></span><br>
+                <input type="tel" class="tel" name="telefone_celular" placeholder="Ex.: +XX (XX) XXXXX-XXXX" id="idtel" maxlength="13" required value="<?php echo isset($_POST['telefone_celular']) ? $_POST['telefone_celular'] : ''; ?>">
+                <span class="msgError"><?php echo $cell_error; ?></span>
             </div>
             <div class="telFixo">
-                <label for="idtelf">Telefone Fixo</label>
-                <input type="tel" class="tel" name="telefone_fixo" placeholder="Ex.: +XX (XX) XXXX-XXXX" id="idtelf" onkeyup="formataTel(this)" maxlength="12" required>
+                <label for="idtelf" id="labTelF">Telefone Fixo</label>
+                <input type="tel" class="tel" name="telefone_fixo" placeholder="Ex.: +XX (XX) XXXX-XXXX" id="idtelf" maxlength="12" required value="<?php echo isset($_POST['telefone_fixo']) ? $_POST['telefone_fixo'] : ''; ?>">
             </div>
             <div class="cep">
-                <label for="idcep">CEP</label>
-                <input type="text" class="end" id="idcep" name="cep" placeholder="Ex.: XXXXX-XXX" onkeyup="formataCep(this)" required>
-                <p id=rescep></p>
+                <label for="idcep" id="labcep">CEP</label>
+                <input type="text" class="end" id="idcep" name="cep" placeholder="Ex.: XXXXX-XXX" required value="<?php echo isset($_POST['cep']) ? $_POST['cep'] : ''; ?>">
             </div>
             <div class="rua">
                 <label for="idrua" id="labrua">Rua</label>
-                <input type="text" class="end" name="rua" id="idrua" placeholder="Rua" required>
+                <input type="text" class="end" name="rua" id="idrua" placeholder="Rua" required value="<?php echo isset($_POST['rua']) ? $_POST['rua'] : ''; ?>">
             </div>
             <div class="numero">
                 <label for="idnum">Número</label>
-                <input type="text" class="end" name="num" id="idnum" placeholder="Nº" required>
+                <input type="text" class="end" name="num" id="idnum" placeholder="Nº" required value="<?php echo isset($_POST['num']) ? $_POST['num'] : ''; ?>">
             </div>
             <div class="complemento">
                 <label for="idcomp">Complemento</label>
-                <input type="text" class="end" name="comp" id="idcomp" placeholder="Complemento" required>
+                <input type="text" class="end" name="comp" id="idcomp" placeholder="Complemento" required value="<?php echo isset($_POST['comp']) ? $_POST['comp'] : ''; ?>">
             </div>
             <div class="bairro">
                 <label for="idbai">Bairro</label>
-                <input type="text" class="end" name="bairro" id="idbai" placeholder="Bairro" required>
+                <input type="text" class="end" name="bairro" id="idbai" placeholder="Bairro" required value="<?php echo isset($_POST['bairro']) ? $_POST['bairro'] : ''; ?>">
             </div>
             <div class="cidade">
                 <label for="idcdd">Cidade</label>
-                <input type="text" class="end" name="cdd" id="idcdd" placeholder="Cidade" required>
+                <input type="text" class="end" name="cdd" id="idcdd" placeholder="Cidade" required value="<?php echo isset($_POST['cdd']) ? $_POST['cdd'] : ''; ?>">
             </div>
             <div class="estado">
                 <label for="idest">Estado</label>
-                <input type="text" class="end" name="estado" id="idest" placeholder="Estado" required>
+                <input type="text" class="end" name="estado" id="idest" placeholder="Estado" required value="<?php echo isset($_POST['estado']) ? $_POST['estado'] : ''; ?>">
             </div>
             <div class="login">
-                <label for="idlogin">Login</label>
-                <input type="text" name="login" placeholder="Login com 6 caracteres" id="idlogin" maxlength="6" minlength="6" required>
-                <span><?php echo $usuario_error; ?></span><br>
+                <label for="idlogin" id="resLog">Login</label>
+                <input type="text" name="login" placeholder="Login com 6 caracteres" id="idlogin" maxlength="6" minlength="6" required value="<?php echo isset($_POST['login']) ? $_POST['login'] : ''; ?>">
+                <span class="msgError"><?php echo $usuario_error; ?></span>
             </div>
             <div class="senha">
-                <label for="idsen">Senha</label>
-                <input type="password" name="senha" placeholder="Senha com 8 caracteres" id="idsen" maxlength="8" minlength="8" required>
+                <label for="idsen" id="labSen">Senha</label>
+                <input type="password" name="senha" placeholder="Senha com 8 caracteres" id="idsen" maxlength="8" minlength="8" required value="<?php echo isset($_POST['senha']) ? $_POST['senha'] : ''; ?>">
             </div>
             <div class="confirmacaoDeSenha">
-                <label for="idcsen">Confirme a senha</label>
-                <input type="password" name="confirmacao_senha" placeholder="Confirmação da Senha" id="idcsen" maxlength="8" minlength="8" required>
-                <p id="resSenha"></p>
+                <label for="idcsen" id="resSenha">Confirme a senha</label>
+                <input type="password" name="confirmacao_senha" placeholder="Confirmação da Senha" id="idcsen" maxlength="8" minlength="8" required value="<?php echo isset($_POST['confirmacao_senha']) ? $_POST['confirmacao_senha'] : ''; ?>">
             </div>
             <div class="btn">
                 <button type="submit" name="acao">Enviar</button>
@@ -189,8 +186,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <script src="./JS.cad/cpf.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./JS.cad/cSenha.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
     <script src="./JS.cad/formatacao.js"></script>
-    
+    <script src="./JS.cad/funcoes.js"></script>
 </body>
 </html>
